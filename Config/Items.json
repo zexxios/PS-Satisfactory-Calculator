@@ -1,0 +1,3178 @@
+[
+    {
+        "ItemName": "Iron Ore",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": "Miner"
+    },
+    {
+        "ItemName": "Copper Ore",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": "Miner"
+    },
+    {
+        "ItemName": "Limestone",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": "Miner"
+    },
+    {
+        "ItemName": "Caterium Ore",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": "Miner"
+    },
+    {
+        "ItemName": "Coal",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": "Miner"
+    },
+    {
+        "ItemName": "Raw Quartz",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": "Miner"
+    },
+    {
+        "ItemName": "Sulfur",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": "Miner"
+    },
+    {
+        "ItemName": "Bauxite",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": "Miner"
+    },
+    {
+        "ItemName": "Uranium",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": true,
+        "Machine": "Miner"
+    },
+    {
+        "ItemName": "SAM Ore",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": "Miner"
+    },
+    {
+        "ItemName": "Water",
+        "Tier": 0,
+        "Stack": 0,
+        "SinkPoints": 0,
+        "Form": "Liquid",
+        "Radioactive": false,
+        "Machine": "Water Extractor"
+    },
+    {
+        "ItemName": "Crude Oil",
+        "Tier": 0,
+        "Stack": 0,
+        "SinkPoints": 0,
+        "Form": "Liquid",
+        "Radioactive": false,
+        "Machine": "Oil Extractor"
+    },
+    {
+        "ItemName": "Nitrogen Gas",
+        "Tier": 0,
+        "Stack": 0,
+        "SinkPoints": 0,
+        "Form": "Gas",
+        "Radioactive": false,
+        "Machine": "Resource Well Extractor"
+    },
+    {
+        "ItemName": "Excited Photonic Matter",
+        "Tier": 0,
+        "Stack": 0,
+        "SinkPoints": 0,
+        "Form": "Gaslike",
+        "Radioactive": false,
+        "Machine": "Converter"
+    },
+    {
+        "ItemName": "Iron Ingot",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Smelter",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ore",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Iron Alloy Ingot",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ore",
+                        "Quantity": 20
+                    },
+                    {
+                        "ItemName": "Copper Ore",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 50,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Pure Iron Ingot",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ore",
+                        "Quantity": 35
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 65,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Copper Ingot",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Smelter",
+                "Input": [
+                    {
+                        "ItemName": "Copper Ore",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Copper Alloy Ingot",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Copper Ore",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Iron Ore",
+                        "Quantity": 25
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 100,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Pure Copper Ingot",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Copper Ore",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 37.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Concrete",
+        "Tier": 1,
+        "Stack": 500,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Limestone",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 15,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Fine Concrete",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Limestone",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Silica",
+                        "Quantity": 7.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 25,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Rubber Concrete",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Limestone",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 45,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Wet Concrete",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Limestone",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 100
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 80,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Caterium Ingot",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Smelter",
+                "Input": [
+                    {
+                        "ItemName": "Caterium Ore",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 15,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Pure Caterium Ingot",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Caterium Ore",
+                        "Quantity": 24
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 24
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 12,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Steel Ingot",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ore",
+                        "Quantity": 45
+                    },
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 45,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Coke Steel Ingot",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ore",
+                        "Quantity": 75
+                    },
+                    {
+                        "ItemName": "Petroleum Coke",
+                        "Quantity": 75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 100,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Solid Steel Ingot",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ingot",
+                        "Quantity": 40
+                    },
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 50
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Compacted Steel Ingot",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ore",
+                        "Quantity": 22.5
+                    },
+                    {
+                        "ItemName": "Compacted Coal",
+                        "Quantity": 11.25
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 37.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Alumina Solution",
+        "Tier": 1,
+        "Stack": 0,
+        "SinkPoints": 0,
+        "Form": "Liquid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Bauxite",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 180
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 120,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Silica",
+                                "Quantity": 50
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Sloppy Alumina",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Bauxite",
+                        "Quantity": 200
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 200
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 240,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Silica",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Raw Quartz",
+                        "Quantity": 22.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 37.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Cheap Silica",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Raw Quartz",
+                        "Quantity": 11.25
+                    },
+                    {
+                        "ItemName": "Limestone",
+                        "Quantity": 18.75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 26.25,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Quartz Crystal",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Raw Quartz",
+                        "Quantity": 37.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 22.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Pure Quartz Crystal",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Raw Quartz",
+                        "Quantity": 67.5
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 37.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 52.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Sulfuric Acid",
+        "Tier": 1,
+        "Stack": 0,
+        "SinkPoints": 0,
+        "Form": "Liquid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Sulfur",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 50
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 50,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Fuel",
+        "Tier": 1,
+        "Stack": 0,
+        "SinkPoints": 2,
+        "Form": "Liquid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Crude Oil",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 40,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Polymer Resin",
+                                "Quantity": 30
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Residual Fuel",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Heavy Oil Residue",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 40,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Diluted Fuel",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Heavy Oil Residue",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 100
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 100,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Heavy Oil Residue",
+        "Tier": 1,
+        "Stack": 0,
+        "SinkPoints": 2,
+        "Form": "Liquid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Heavy Oil Residue",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Crude Oil",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 40,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Polymer Resin",
+                                "Quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Fabric",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Mycelia",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Biomass",
+                        "Quantity": 75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 15,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Polyester Fabric",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Polymer Resin",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Plastic",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Crude Oil",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Heavy Oil Residue",
+                                "Quantity": 10
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Residual Plastic",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Polymer Resin",
+                        "Quantity": 60
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Recycled Plastic",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Fuel",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Rubber",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Crude Oil",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Heavy Oil Residue",
+                                "Quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Residual Rubber",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Polymer Resin",
+                        "Quantity": 40
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Recycled Rubber",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Fuel",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Black Powder",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Sulfur",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Fine Black Powder",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Sulfur",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Compacted Coal",
+                        "Quantity": 3.75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 15,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Aluminum Scrap",
+        "Tier": 2,
+        "Stack": 500,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Alumina Solution",
+                        "Quantity": 240
+                    },
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 120
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 360,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Water",
+                                "Quantity": 120
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Electrode-Aluminum Scrap",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Alumina Solution",
+                        "Quantity": 180
+                    },
+                    {
+                        "ItemName": "Petroleum Coke",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 300,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Water",
+                                "Quantity": 105
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Instant Scrap",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Bauxite",
+                        "Quantity": 150
+                    },
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 100
+                    },
+                    {
+                        "ItemName": "Sulfuric Acid",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 300,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Water",
+                                "Quantity": 50
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Copper Powder",
+        "Tier": 2,
+        "Stack": 500,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Copper Ingot",
+                        "Quantity": 300
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 50,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Nitric Acid",
+        "Tier": 2,
+        "Stack": 0,
+        "SinkPoints": 0,
+        "Form": "Liquid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Nitrogen Gas",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Iron Plate",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Empty Fluid Tank",
+        "Tier": 2,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Ingot",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Empty Canister",
+        "Tier": 2,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Coated Iron Canister",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Iron Plate",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Copper Sheet",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Steel Canister",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Steel Ingot",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 40,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Petroleum Coke",
+        "Tier": 2,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Heavy Oil Residue",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 120,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Compacted Coal",
+        "Tier": 2,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 25
+                    },
+                    {
+                        "ItemName": "Sulfur",
+                        "Quantity": 25
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 25,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Encased Uranium Cell",
+        "Tier": 2,
+        "Stack": 500,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": true,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Uranium",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Concrete",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Sulfuric Acid",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 25,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Sulfuric Acid",
+                                "Quantity": 10
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Infused Uranium Cell",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Uranium",
+                        "Quantity": 25
+                    },
+                    {
+                        "ItemName": "Silica",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Sulfur",
+                        "Quantity": 25
+                    },
+                    {
+                        "ItemName": "Quickwire",
+                        "Quantity": 75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Sulfuric Acid",
+                                "Quantity": 10
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Liquid Biofuel",
+        "Tier": 2,
+        "Stack": 0,
+        "SinkPoints": 0,
+        "Form": "Liquid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Solid Biofuel",
+                        "Quantity": 90
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Turbofuel",
+        "Tier": 2,
+        "Stack": 0,
+        "SinkPoints": 0,
+        "Form": "Liquid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Fuel",
+                        "Quantity": 22.5
+                    },
+                    {
+                        "ItemName": "Compacted Coal",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 18.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Turbo Heavy Fuel",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Heavy Oil Residue",
+                        "Quantity": 37.5
+                    },
+                    {
+                        "ItemName": "Compacted Coal",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Turbo Blend Fuel",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Fuel",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Heavy Oil Residue",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Sulfur",
+                        "Quantity": 22.5
+                    },
+                    {
+                        "ItemName": "Petroleum Coke",
+                        "Quantity": 22.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 45,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Smokeless Powder",
+        "Tier": 2,
+        "Stack": 500,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Black Powder",
+                        "Quantity": 20
+                    },
+                    {
+                        "ItemName": "Heavy Oil Residue",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Iron Plate",
+        "Tier": 2,
+        "Stack": 200,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ingot",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Coated Iron Plate",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ingot",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Steel Coated Plate",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Steel Ingot",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 45,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Iron Rod",
+        "Tier": 2,
+        "Stack": 200,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ingot",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 15,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Steel Rod",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Steel Ingot",
+                        "Quantity": 12
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 48,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Screw",
+        "Tier": 2,
+        "Stack": 500,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Iron Rod",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 40,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Steel Screw",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Steel Beam",
+                        "Quantity": 5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 260,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Cast Screw",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ingot",
+                        "Quantity": 12.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 50,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Wire",
+        "Tier": 2,
+        "Stack": 500,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Copper Ingot",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Fused Wire",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Copper Ingot",
+                        "Quantity": 12
+                    },
+                    {
+                        "ItemName": "Caterium Ingot",
+                        "Quantity": 3
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 90,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Iron Wire",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ingot",
+                        "Quantity": 12.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 22.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Caterium Wire",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Caterium Ingot",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 120,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Quickwire",
+        "Tier": 2,
+        "Stack": 500,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Caterium Ingot",
+                        "Quantity": 12
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Fused Quickwire",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Caterium Ingot",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Copper Ingot",
+                        "Quantity": 37.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 90,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Copper Sheet",
+        "Tier": 2,
+        "Stack": 200,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Copper Ingot",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 10,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Steamed Copper Sheet",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Copper Ingot",
+                        "Quantity": 22.5
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 22.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 22.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Steel Pipe",
+        "Tier": 2,
+        "Stack": 200,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Steel Ingot",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Steel Beam",
+        "Tier": 2,
+        "Stack": 200,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Steel Ingot",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 15,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Aluminum Ingot",
+        "Tier": 3,
+        "Stack": 200,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Scrap",
+                        "Quantity": 90
+                    },
+                    {
+                        "ItemName": "Silica",
+                        "Quantity": 75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Pure Aluminum Ingot",
+                "Machine": "Smelter",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Scrap",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Cable",
+        "Tier": 3,
+        "Stack": 200,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Wire",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Insulated Cable",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Wire",
+                        "Quantity": 45
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 100,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Quickwire Cable",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Quickwire",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 27.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Coated Cable",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Wire",
+                        "Quantity": 37.5
+                    },
+                    {
+                        "ItemName": "Heavy Oil Residue",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 67.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Reinforced Iron Plate",
+        "Tier": 3,
+        "Stack": 200,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Iron Plate",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Screw",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Adhered Iron Plate",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Iron Plate",
+                        "Quantity": 11.25
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 3.75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Bolted Iron Plate",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Iron Plate",
+                        "Quantity": 90
+                    },
+                    {
+                        "ItemName": "Screw",
+                        "Quantity": 250
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 15,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Stitched Iron Plate",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Iron Plate",
+                        "Quantity": 18.75
+                    },
+                    {
+                        "ItemName": "Wire",
+                        "Quantity": 37.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5.63,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Rotor",
+        "Tier": 3,
+        "Stack": 200,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Iron Rod",
+                        "Quantity": 20
+                    },
+                    {
+                        "ItemName": "Screw",
+                        "Quantity": 100
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 4,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Copper Rotor",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Copper Sheet",
+                        "Quantity": 22.5
+                    },
+                    {
+                        "ItemName": "Screw",
+                        "Quantity": 195
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 11.25,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Steel Rotor",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Steel Pipe",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Wire",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Encased Industrial Beam",
+        "Tier": 3,
+        "Stack": 200,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Steel Beam",
+                        "Quantity": 24
+                    },
+                    {
+                        "ItemName": "Concrete",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 6,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Encased Industrial Pipe",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Steel Pipe",
+                        "Quantity": 28
+                    },
+                    {
+                        "ItemName": "Concrete",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 4,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Stator",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Steel Pipe",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Wire",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Quickwire Stator",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Steel Pipe",
+                        "Quantity": 16
+                    },
+                    {
+                        "ItemName": "Quickwire",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 8,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "AI Limiter",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Copper Sheet",
+                        "Quantity": 27.5
+                    },
+                    {
+                        "ItemName": "Quickwire",
+                        "Quantity": 100
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Circuit Board",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Copper Sheet",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 7.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Silicon Circuit Board",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Copper Sheet",
+                        "Quantity": 27.5
+                    },
+                    {
+                        "ItemName": "Silica",
+                        "Quantity": 27.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 12.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Caterium Circuit Board",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 12.5
+                    },
+                    {
+                        "ItemName": "Quickwire",
+                        "Quantity": 37.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 8.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Electrode Circuit Board",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Petroleum Coke",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Modular Frame",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Reinforced Iron Plate",
+                        "Quantity": 3
+                    },
+                    {
+                        "ItemName": "Iron Rod",
+                        "Quantity": 12
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Bolted Frame",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Reinforced Iron Plate",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Screw",
+                        "Quantity": 140
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Steeled Frame",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Reinforced Iron Plate",
+                        "Quantity": 2
+                    },
+                    {
+                        "ItemName": "Steel Pipe",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Smart Plating",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Reinforced Iron Plate",
+                        "Quantity": 2
+                    },
+                    {
+                        "ItemName": "Rotor",
+                        "Quantity": 2
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Plastic Smart Plating",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Reinforced Iron Plate",
+                        "Quantity": 2.5
+                    },
+                    {
+                        "ItemName": "Rotor",
+                        "Quantity": 2.5
+                    },
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 7.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Electromagnetic Control Rod",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Stator",
+                        "Quantity": 6
+                    },
+                    {
+                        "ItemName": "AI Limiter",
+                        "Quantity": 4
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 4,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Electromagnetic Connection Rod",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Stator",
+                        "Quantity": 8
+                    },
+                    {
+                        "ItemName": "High-Speed Connector",
+                        "Quantity": 4
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 8,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Motor",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Rotor",
+                        "Quantity": 10
+                    },
+                    {
+                        "ItemName": "Stator",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Electric Motor",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Rotor",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Electromagnetic Control Rod",
+                        "Quantity": 3.75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 7.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Rigour Motor",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Rotor",
+                        "Quantity": 3.75
+                    },
+                    {
+                        "ItemName": "Stator",
+                        "Quantity": 3.75
+                    },
+                    {
+                        "ItemName": "Crystal Oscillator",
+                        "Quantity": 1.25
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 7.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Crystal Oscillator",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Quartz Crystal",
+                        "Quantity": 18
+                    },
+                    {
+                        "ItemName": "Cable",
+                        "Quantity": 14
+                    },
+                    {
+                        "ItemName": "Reinforced Iron Plate",
+                        "Quantity": 2.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Insulated Crystal Oscialltor",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Quartz Crystal",
+                        "Quantity": 18.75
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 13.13
+                    },
+                    {
+                        "ItemName": "AI Limiter",
+                        "Quantity": 1.88
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1.88,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Alclad Aluminum Sheet",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Ingot",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Copper Ingot",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Aluminum Casing",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Ingot",
+                        "Quantity": 90
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Alclad Casing",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Ingot",
+                        "Quantity": 150
+                    },
+                    {
+                        "ItemName": "Copper Ingot",
+                        "Quantity": 75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 112.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "High-Speed Connector",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Quickwire",
+                        "Quantity": 210
+                    },
+                    {
+                        "ItemName": "Cable",
+                        "Quantity": 37.5
+                    },
+                    {
+                        "ItemName": "Circuit Board",
+                        "Quantity": 3.75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Silicon High-Speed Connector",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Quickwire",
+                        "Quantity": 90
+                    },
+                    {
+                        "ItemName": "Silica",
+                        "Quantity": 37.5
+                    },
+                    {
+                        "ItemName": "Circuit Board",
+                        "Quantity": 3
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Computer",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Circuit Board",
+                        "Quantity": 25
+                    },
+                    {
+                        "ItemName": "Cable",
+                        "Quantity": 22.5
+                    },
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 45
+                    },
+                    {
+                        "ItemName": "Screw",
+                        "Quantity": 130
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Caterium Computer",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Circuit Board",
+                        "Quantity": 26.25
+                    },
+                    {
+                        "ItemName": "Quickwire",
+                        "Quantity": 105
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Crystal Computer",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Circuit Board",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Crystal Oscillator",
+                        "Quantity": 2.81
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2.81,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Radio Control Unit",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Casing",
+                        "Quantity": 40
+                    },
+                    {
+                        "ItemName": "Crystal Oscillator",
+                        "Quantity": 2.81
+                    },
+                    {
+                        "ItemName": "Computer",
+                        "Quantity": 1.25
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Radio Control System",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Casing",
+                        "Quantity": 90
+                    },
+                    {
+                        "ItemName": "Crystal Oscillator",
+                        "Quantity": 1.5
+                    },
+                    {
+                        "ItemName": "Circuit Board",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 4.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Radio Connection Unit",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Heat Sink",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "High-Speed Connector",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Quartz Crystal",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Automated Wiring",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Stator",
+                        "Quantity": 2.5
+                    },
+                    {
+                        "ItemName": "Cable",
+                        "Quantity": 50
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Automated Speed Wiring",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Stator",
+                        "Quantity": 3.75
+                    },
+                    {
+                        "ItemName": "Wire",
+                        "Quantity": 75
+                    },
+                    {
+                        "ItemName": "High-Speed Connector",
+                        "Quantity": 1.88
+                    }
+                ],
+            "Output": [
+                    {
+                        "Quantity": 7.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

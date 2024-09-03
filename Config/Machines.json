@@ -1,0 +1,54 @@
+[
+    {
+        "Name": "Smelter",
+        "BasePower": "4",
+        "OverclockPower": {
+            "25": ".64",
+            "50": "1.6",
+            "75": "2.73",
+            "150": "6.84",
+            "200": "10",
+            "250": "13.43"
+        }
+    },
+    {
+        "Name": "Constructor",
+        "BasePower": "4"
+    },
+    {
+        "Name": "Assembler",
+        "BasePower": "15"
+    },
+    {
+        "Name": "Foundry",
+        "BasePower": "16"
+    },
+    {
+        "Name": "Refinery",
+        "BasePower": "30"
+    },
+    {
+        "Name": "Manufacturer",
+        "BasePower": "55"
+    },
+    {
+        "Name": "Blender",
+        "BasePower": "55"
+    },
+    {
+        "Name": "Packager",
+        "BasePower": "4"
+    },
+    {
+        "Name": "Particle Accelerator",
+        "BasePower": "500-1500"
+    },
+    {
+        "Name": "Quantum Encoder",
+        "BasePower": "4"
+    },
+    {
+        "Name": "Converter",
+        "BasePower": "4"
+    }
+]
