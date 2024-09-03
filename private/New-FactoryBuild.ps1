@@ -55,8 +55,6 @@ function New-FactoryBuild {
                     } else {
 
                     }
-
-                    
                 }
             }
             
