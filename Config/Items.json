@@ -1,9 +1,99 @@
 [
     {
+        "ItemName": "Leaves",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 3,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": ""
+    },
+    {
+        "ItemName": "Wood",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 30,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": ""
+    },
+    {
+        "ItemName": "Mycelia",
+        "Tier": 0,
+        "Stack": 200,
+        "SinkPoints": 10,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": ""
+    },
+    {
+        "ItemName": "Stinger Remains",
+        "Tier": 0,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": ""
+    },
+    {
+        "ItemName": "Spitter Remains",
+        "Tier": 0,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": ""
+    },
+    {
+        "ItemName": "Hog Remains",
+        "Tier": 0,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": ""
+    },
+    {
+        "ItemName": "Hatcher Protein",
+        "Tier": 0,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": ""
+    },
+    {
+        "ItemName": "Blue Power Slug",
+        "Tier": 0,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": ""
+    },
+    {
+        "ItemName": "Yellow Power Slug",
+        "Tier": 0,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": ""
+    },
+    {
+        "ItemName": "Purple Power Slug",
+        "Tier": 0,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": ""
+    },
+    {
         "ItemName": "Iron Ore",
         "Tier": 0,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 1,
         "Form": "Solid",
         "Radioactive": false,
         "Machine": "Miner"
@@ -12,7 +102,7 @@
         "ItemName": "Copper Ore",
         "Tier": 0,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 3,
         "Form": "Solid",
         "Radioactive": false,
         "Machine": "Miner"
@@ -30,7 +120,7 @@
         "ItemName": "Caterium Ore",
         "Tier": 0,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 7,
         "Form": "Solid",
         "Radioactive": false,
         "Machine": "Miner"
@@ -39,7 +129,7 @@
         "ItemName": "Coal",
         "Tier": 0,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 3,
         "Form": "Solid",
         "Radioactive": false,
         "Machine": "Miner"
@@ -48,7 +138,7 @@
         "ItemName": "Raw Quartz",
         "Tier": 0,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 15,
         "Form": "Solid",
         "Radioactive": false,
         "Machine": "Miner"
@@ -57,7 +147,7 @@
         "ItemName": "Sulfur",
         "Tier": 0,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 11,
         "Form": "Solid",
         "Radioactive": false,
         "Machine": "Miner"
@@ -66,7 +156,7 @@
         "ItemName": "Bauxite",
         "Tier": 0,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 8,
         "Form": "Solid",
         "Radioactive": false,
         "Machine": "Miner"
@@ -75,7 +165,7 @@
         "ItemName": "Uranium",
         "Tier": 0,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 35,
         "Form": "Solid",
         "Radioactive": true,
         "Machine": "Miner"
@@ -84,7 +174,7 @@
         "ItemName": "SAM Ore",
         "Tier": 0,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 0,
         "Form": "Solid",
         "Radioactive": false,
         "Machine": "Miner"
@@ -124,6 +214,250 @@
         "Form": "Gaslike",
         "Radioactive": false,
         "Machine": "Converter"
+    },
+    {
+        "ItemName": "Uranium Waste",
+        "Tier": 0,
+        "Stack": 500,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": true,
+        "Machine": "Nuclear Power Plant"
+    },
+    {
+        "ItemName": "Plutonium Waste",
+        "Tier": 0,
+        "Stack": 500,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": true,
+        "Machine": "Nuclear Power Plant"
+    },
+    {
+        "ItemName": "FICMAS Gift",
+        "Tier": 0,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Machine": "FICMAS Tree"
+    },
+    {
+        "ItemName": "Alien Protein",
+        "Tier": 1,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Stinger Protein",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Stinger Remains",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Spitter Protein",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Spitter Remains",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Hog Protein",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Hog Remains",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Hatcher Protein",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Hatcher Remains",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Biomass",
+        "Tier": 1,
+        "Stack": 200,
+        "SinkPoints": 12,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Biomass (Alien Protein)",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Alien Protein",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1500,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Biomass (Mycelia)",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Mycelia",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 150,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Biomass (Leaves)",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Leaves",
+                        "Quantity": 120
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Biomass (Wood)",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Wood",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 300,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Power Shard",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Power Shard (1)",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Blue Power Slug",
+                        "Quantity": 7.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 7.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Power Shard (2)",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Yellow Power Slug",
+                        "Quantity": 5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 10,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Power Shard (5)",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Purple Power Slug",
+                        "Quantity": 2.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 12.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
     },
     {
         "ItemName": "Iron Ingot",
@@ -198,7 +532,7 @@
         "ItemName": "Copper Ingot",
         "Tier": 1,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 6,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -267,7 +601,7 @@
         "ItemName": "Concrete",
         "Tier": 1,
         "Stack": 500,
-        "SinkPoints": 2,
+        "SinkPoints": 12,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -357,7 +691,7 @@
         "ItemName": "Caterium Ingot",
         "Tier": 1,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 42,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -405,7 +739,7 @@
         "ItemName": "Steel Ingot",
         "Tier": 1,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 8,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -554,8 +888,8 @@
     {
         "ItemName": "Silica",
         "Tier": 1,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 200,
+        "SinkPoints": 20,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -602,8 +936,8 @@
     {
         "ItemName": "Quartz Crystal",
         "Tier": 1,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 200,
+        "SinkPoints": 50,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -682,7 +1016,7 @@
         "ItemName": "Fuel",
         "Tier": 1,
         "Stack": 0,
-        "SinkPoints": 2,
+        "SinkPoints": 0,
         "Form": "Liquid",
         "Radioactive": false,
         "Recipes": [
@@ -751,7 +1085,7 @@
         "ItemName": "Heavy Oil Residue",
         "Tier": 1,
         "Stack": 0,
-        "SinkPoints": 2,
+        "SinkPoints": 0,
         "Form": "Liquid",
         "Radioactive": false,
         "Recipes": [
@@ -779,10 +1113,41 @@
         ]
     },
     {
+        "ItemName": "Polymer Resin",
+        "Tier": 1,
+        "Stack": 200,
+        "SinkPoints": 12,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Polymer Resin",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Crude Oil",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 130,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Heavy Oil Residue",
+                                "Quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "ItemName": "Fabric",
         "Tier": 1,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 140,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -833,8 +1198,8 @@
     {
         "ItemName": "Plastic",
         "Tier": 1,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 200,
+        "SinkPoints": 75,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -906,8 +1271,8 @@
     {
         "ItemName": "Rubber",
         "Tier": 1,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 200,
+        "SinkPoints": 60,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -979,8 +1344,8 @@
     {
         "ItemName": "Black Powder",
         "Tier": 1,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 200,
+        "SinkPoints": 14,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1029,10 +1394,261 @@
         ]
     },
     {
+        "ItemName": "Red FICSMAS Ornament",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Smelter",
+                "Input": [
+                    {
+                        "ItemName": "FICSMAS Gift",
+                        "Quantity": 5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Blue FICSMAS Ornament",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Smelter",
+                "Input": [
+                    {
+                        "ItemName": "FICSMAS Gift",
+                        "Quantity": 5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "FICSMAS Tree Branch",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "FICSMAS Gift",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 10,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Candy Cane",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "FICSMAS Gift",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "FICSMAS Bow",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "FICSMAS Gift",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Actual Snow",
+        "Tier": 1,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "FICSMAS Gift",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 10,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Alien DNA Capsule",
+        "Tier": 2,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Alien DNA Capsule",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Alien Protein",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 10,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Solid Biofuel",
+        "Tier": 2,
+        "Stack": 200,
+        "SinkPoints": 48,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Biomass",
+                        "Quantity": 120
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Gas Filter",
+        "Tier": 2,
+        "Stack": 50,
+        "SinkPoints": 830,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 37.5
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Fabric",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 7.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "ItemName": "Aluminum Scrap",
         "Tier": 2,
         "Stack": 500,
-        "SinkPoints": 2,
+        "SinkPoints": 27,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1125,7 +1741,7 @@
         "ItemName": "Copper Powder",
         "Tier": 2,
         "Stack": 500,
-        "SinkPoints": 2,
+        "SinkPoints": 72,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1187,7 +1803,7 @@
         "ItemName": "Empty Fluid Tank",
         "Tier": 2,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 225,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1214,7 +1830,7 @@
         "ItemName": "Empty Canister",
         "Tier": 2,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 60,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1278,8 +1894,8 @@
     {
         "ItemName": "Petroleum Coke",
         "Tier": 2,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 200,
+        "SinkPoints": 20,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1306,7 +1922,7 @@
         "ItemName": "Compacted Coal",
         "Tier": 2,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 28,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1336,8 +1952,8 @@
     {
         "ItemName": "Encased Uranium Cell",
         "Tier": 2,
-        "Stack": 500,
-        "SinkPoints": 2,
+        "Stack": 200,
+        "SinkPoints": 147,
         "Form": "Solid",
         "Radioactive": true,
         "Recipes": [
@@ -1520,8 +2136,8 @@
     {
         "ItemName": "Smokeless Powder",
         "Tier": 2,
-        "Stack": 500,
-        "SinkPoints": 2,
+        "Stack": 100,
+        "SinkPoints": 58,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1552,7 +2168,7 @@
         "ItemName": "Iron Plate",
         "Tier": 2,
         "Stack": 200,
-        "SinkPoints": 2,
+        "SinkPoints": 6,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1621,7 +2237,7 @@
         "ItemName": "Iron Rod",
         "Tier": 2,
         "Stack": 200,
-        "SinkPoints": 2,
+        "SinkPoints": 4,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1726,7 +2342,7 @@
         "ItemName": "Wire",
         "Tier": 2,
         "Stack": 500,
-        "SinkPoints": 2,
+        "SinkPoints": 6,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1808,7 +2424,7 @@
         "ItemName": "Quickwire",
         "Tier": 2,
         "Stack": 500,
-        "SinkPoints": 2,
+        "SinkPoints": 17,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1856,7 +2472,7 @@
         "ItemName": "Copper Sheet",
         "Tier": 2,
         "Stack": 200,
-        "SinkPoints": 2,
+        "SinkPoints": 24,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1904,7 +2520,7 @@
         "ItemName": "Steel Pipe",
         "Tier": 2,
         "Stack": 200,
-        "SinkPoints": 2,
+        "SinkPoints": 24,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1931,7 +2547,7 @@
         "ItemName": "Steel Beam",
         "Tier": 2,
         "Stack": 200,
-        "SinkPoints": 2,
+        "SinkPoints": 64,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -1955,10 +2571,196 @@
         ]
     },
     {
+        "ItemName": "Snowball",
+        "Tier": 2,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Actual Snow",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Copper FICSMAS Ornament",
+        "Tier": 2,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Red FICSMAS Ornament",
+                        "Quantity": 10
+                    },
+                    {
+                        "ItemName": "Copper Ingot",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Iron FICSMAS Ornament",
+        "Tier": 2,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Blue FICSMAS Ornament",
+                        "Quantity": 10
+                    },
+                    {
+                        "ItemName": "Iron Ingot",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Nobelisk",
+        "Tier": 3,
+        "Stack": 50,
+        "SinkPoints": 152,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Black Powder",
+                        "Quantity": 20
+                    },
+                    {
+                        "ItemName": "Steel Pipe",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 10,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Rifle Ammo",
+        "Tier": 3,
+        "Stack": 500,
+        "SinkPoints": 25,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Copper Sheet",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Smokeless Powder",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Iodine Infused Filter",
+        "Tier": 3,
+        "Stack": 50,
+        "SinkPoints": 2718,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Gas Filter",
+                        "Quantity": 3.75
+                    },
+                    {
+                        "ItemName": "Quickwire",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Aluminum Casing",
+                        "Quantity": 3.75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "ItemName": "Aluminum Ingot",
         "Tier": 3,
-        "Stack": 200,
-        "SinkPoints": 2,
+        "Stack": 100,
+        "SinkPoints": 131,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2006,7 +2808,7 @@
         "ItemName": "Cable",
         "Tier": 3,
         "Stack": 200,
-        "SinkPoints": 2,
+        "SinkPoints": 24,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2095,8 +2897,8 @@
     {
         "ItemName": "Reinforced Iron Plate",
         "Tier": 3,
-        "Stack": 200,
-        "SinkPoints": 2,
+        "Stack": 100,
+        "SinkPoints": 120,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2189,8 +2991,8 @@
     {
         "ItemName": "Rotor",
         "Tier": 3,
-        "Stack": 200,
-        "SinkPoints": 2,
+        "Stack": 100,
+        "SinkPoints": 140,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2262,8 +3064,8 @@
     {
         "ItemName": "Encased Industrial Beam",
         "Tier": 3,
-        "Stack": 200,
-        "SinkPoints": 2,
+        "Stack": 100,
+        "SinkPoints": 632,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2315,7 +3117,7 @@
         "ItemName": "Stator",
         "Tier": 3,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 240,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2367,7 +3169,7 @@
         "ItemName": "AI Limiter",
         "Tier": 3,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 920,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2397,8 +3199,8 @@
     {
         "ItemName": "Circuit Board",
         "Tier": 3,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 200,
+        "SinkPoints": 696,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2489,10 +3291,533 @@
         ]
     },
     {
-        "ItemName": "Modular Frame",
-        "Tier": 4,
+        "ItemName": "Packaged Alumina Solution",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 160,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Alumina Solution",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Empty Canister",
+                        "Quantity": 120
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 120,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Packaged Fuel",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 270,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Fuel",
+                        "Quantity": 40
+                    },
+                    {
+                        "ItemName": "Empty Canister",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 40,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Diluted Packaged Fuel",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Heavy Oil Residue",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Packaged Water",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Packaged Heavy Oil Residue",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 180,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Heavy Oil Residue",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Empty Canister",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Packaged Liquid Biofuel",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 370,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Liquid Biofuel",
+                        "Quantity": 40
+                    },
+                    {
+                        "ItemName": "Empty Canister",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 40,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Packaged Nitric Acid",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 412,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Nitric Acid",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Empty Fluid Tank",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Packaged Nitrogen Gas",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 312,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Nitrogen Gas",
+                        "Quantity": 240
+                    },
+                    {
+                        "ItemName": "Empty Fluid Tank",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Packaged Oil",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 180,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Crude Oil",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Empty Canister",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Packaged Sulfuric Acid",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 152,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Sulfuric Acid",
+                        "Quantity": 40
+                    },
+                    {
+                        "ItemName": "Empty Canister",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 40,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Packaged Turbofuel",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 570,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Turbofuel",
+                        "Quantity": 20
+                    },
+                    {
+                        "ItemName": "Empty Canister",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Packaged Water",
+        "Tier": 3,
+        "Stack": 100,
+        "SinkPoints": 130,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 60
+                    },
+                    {
+                        "ItemName": "Empty Canister",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "FICSMAS Ornament Bundle",
+        "Tier": 3,
         "Stack": 100,
         "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Copper FICSMAS Ornament",
+                        "Quantity": 5
+                    },
+                    {
+                        "ItemName": "Iron FICSMAS Ornament",
+                        "Quantity": 5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Cluster Nobelisk",
+        "Tier": 4,
+        "Stack": 50,
+        "SinkPoints": 1376,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Nobelisk",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Smokeless Powder",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Gas Nobelisk",
+        "Tier": 4,
+        "Stack": 50,
+        "SinkPoints": 544,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Nobelisk",
+                        "Quantity": 5
+                    },
+                    {
+                        "ItemName": "Biomass",
+                        "Quantity": 50
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Nuke Nobelisk",
+        "Tier": 4,
+        "Stack": 50,
+        "SinkPoints": 19600,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Nobelisk",
+                        "Quantity": 2.5
+                    },
+                    {
+                        "ItemName": "Encased Uranium Cell",
+                        "Quantity": 10
+                    },
+                    {
+                        "ItemName": "Smokeless Powder",
+                        "Quantity": 5
+                    },
+                    {
+                        "ItemName": "AI Limiter",
+                        "Quantity": 3
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Turbo Rifle Ammo",
+        "Tier": 4,
+        "Stack": 500,
+        "SinkPoints": 120,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base (Manufacturer)",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Rifle Ammo",
+                        "Quantity": 125
+                    },
+                    {
+                        "ItemName": "Aluminum Casing",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Packaged Turbofuel",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 250,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Base (Blender)",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Rifle Ammo",
+                        "Quantity": 125
+                    },
+                    {
+                        "ItemName": "Aluminum Casing",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Turbofuel",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 250,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Modular Frame",
+        "Tier": 4,
+        "Stack": 50,
+        "SinkPoints": 408,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2564,8 +3889,8 @@
     {
         "ItemName": "Smart Plating",
         "Tier": 4,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 50,
+        "SinkPoints": 520,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2621,7 +3946,7 @@
         "ItemName": "Electromagnetic Control Rod",
         "Tier": 4,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 2560,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2672,8 +3997,8 @@
     {
         "ItemName": "Motor",
         "Tier": 4,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 50,
+        "SinkPoints": 1520,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2750,7 +4075,7 @@
         "ItemName": "Crystal Oscillator",
         "Tier": 4,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 3072,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2809,8 +4134,8 @@
     {
         "ItemName": "Alclad Aluminum Sheet",
         "Tier": 4,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 200,
+        "SinkPoints": 266,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2840,8 +4165,8 @@
     {
         "ItemName": "Aluminum Casing",
         "Tier": 4,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 200,
+        "SinkPoints": 393,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2889,7 +4214,7 @@
         "ItemName": "High-Speed Connector",
         "Tier": 4,
         "Stack": 100,
-        "SinkPoints": 2,
+        "SinkPoints": 3776,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -2948,8 +4273,8 @@
     {
         "ItemName": "Computer",
         "Tier": 4,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 50,
+        "SinkPoints": 17260,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -3033,8 +4358,8 @@
     {
         "ItemName": "Radio Control Unit",
         "Tier": 4,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 50,
+        "SinkPoints": 19600,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -3122,8 +4447,8 @@
     {
         "ItemName": "Automated Wiring",
         "Tier": 4,
-        "Stack": 100,
-        "SinkPoints": 2,
+        "Stack": 50,
+        "SinkPoints": 1440,
         "Form": "Solid",
         "Radioactive": false,
         "Recipes": [
@@ -3169,6 +4494,1707 @@
                     {
                         "Quantity": 7.5,
                         "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "FICSMAS Decoration",
+        "Tier": 4,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "FICSMAS Tree Branch",
+                        "Quantity": 5
+                    },
+                    {
+                        "ItemName": "FICSMAS Ornament Bundle",
+                        "Quantity": 6
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Pulse Nobelisk",
+        "Tier": 5,
+        "Stack": 50,
+        "SinkPoints": 1533,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Nobelisk",
+                        "Quantity": 5
+                    },
+                    {
+                        "ItemName": "Crystal Oscillator",
+                        "Quantity": 1
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Homing Rifle Ammo",
+        "Tier": 5,
+        "Stack": 500,
+        "SinkPoints": 855,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Rifle Ammo",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "High-Speed Connector",
+                        "Quantity": 2.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 25,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Heavy Modular Frame",
+        "Tier": 5,
+        "Stack": 50,
+        "SinkPoints": 11520,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Modular Frame",
+                        "Quantity": 10
+                    },
+                    {
+                        "ItemName": "Steel Pipe",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Encased Industrial Beam",
+                        "Quantity": 10
+                    },
+                    {
+                        "ItemName": "Screw",
+                        "Quantity": 200
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Heavy Flexible Frame",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Modular Frame",
+                        "Quantity": 18.75
+                    },
+                    {
+                        "ItemName": "Encased Industrial Beam",
+                        "Quantity": 11.25
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 75
+                    },
+                    {
+                        "ItemName": "Screw",
+                        "Quantity": 390
+                    }
+                ],
+            "Output": [
+                    {
+                        "Quantity": 3.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Heavy Encased Frame",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Modular Frame",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Encased Industrial Beam",
+                        "Quantity": 9.38
+                    },
+                    {
+                        "ItemName": "Steel Pipe",
+                        "Quantity": 33.75
+                    },
+                    {
+                        "ItemName": "Concrete",
+                        "Quantity": 20.63
+                    }
+                ],
+            "Output": [
+                    {
+                        "Quantity": 2.81,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Heat Sink",
+        "Tier": 5,
+        "Stack": 100,
+        "SinkPoints": 2804,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Alclad Aluminum Sheet",
+                        "Quantity": 37.5
+                    },
+                    {
+                        "ItemName": "Copper Sheet",
+                        "Quantity": 22.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 7.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Heat Exchanger",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Casing",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 30
+                    }
+                ],
+            "Output": [
+                    {
+                        "Quantity": 10,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Battery",
+        "Tier": 5,
+        "Stack": 200,
+        "SinkPoints": 465,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Sulfuric Acid",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Alumina Solution",
+                        "Quantity": 40
+                    },
+                    {
+                        "ItemName": "Aluminum Casing",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Water",
+                                "Quantity": 30
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Classic Battery",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Sulfur",
+                        "Quantity": 45
+                    },
+                    {
+                        "ItemName": "Alclad Aluminum Sheet",
+                        "Quantity": 52.5
+                    },
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 60
+                    },
+                    {
+                        "ItemName": "Wire",
+                        "Quantity": 90
+                    }
+                ],
+            "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Super Computer",
+        "Tier": 5,
+        "Stack": 50,
+        "SinkPoints": 99576,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Computer",
+                        "Quantity": 3.75
+                    },
+                    {
+                        "ItemName": "AI Limiter",
+                        "Quantity": 3.75
+                    },
+                    {
+                        "ItemName": "High-Speed Connector",
+                        "Quantity": 5.63
+                    },
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 52.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1.88,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "OC Supercomputer",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Radio Control Unit",
+                        "Quantity": 9
+                    },
+                    {
+                        "ItemName": "Cooling System",
+                        "Quantity": 9
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Super-State Computer",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Computer",
+                        "Quantity": 3.6
+                    },
+                    {
+                        "ItemName": "Electromagnetic Control Rod",
+                        "Quantity": 2.4
+                    },
+                    {
+                        "ItemName": "Battery",
+                        "Quantity": 24
+                    },
+                    {
+                        "ItemName": "Wire",
+                        "Quantity": 54
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2.4,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Uranium Fuel Rod",
+        "Tier": 5,
+        "Stack": 50,
+        "SinkPoints": 44092,
+        "Form": "Solid",
+        "Radioactive": true,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Encased Uranium Cell",
+                        "Quantity": 20
+                    },
+                    {
+                        "ItemName": "Electromagnetic Control Rod",
+                        "Quantity": 2
+                    },
+                    {
+                        "ItemName": "Encased Industrial Beam",
+                        "Quantity": 1.2
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0.4,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Uranium Fuel Unit",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Encased Uranium Cell",
+                        "Quantity": 20
+                    },
+                    {
+                        "ItemName": "Electromagnetic Control Rod",
+                        "Quantity": 2
+                    },
+                    {
+                        "ItemName": "Crystal Oscillator",
+                        "Quantity": 0.6
+                    },
+                    {
+                        "ItemName": "Beacon",
+                        "Quantity": 1.2
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0.6,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Versatile Framework",
+        "Tier": 5,
+        "Stack": 50,
+        "SinkPoints": 1176,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Modular Frame",
+                        "Quantity": 2.5
+                    },
+                    {
+                        "ItemName": "Steel Beam",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Flexible Framework",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Modular Frame",
+                        "Quantity": 3.75
+                    },
+                    {
+                        "ItemName": "Steel Beam",
+                        "Quantity": 22.5
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 7.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Adaptive Control Unit",
+        "Tier": 5,
+        "Stack": 50,
+        "SinkPoints": 86120,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Automated Wiring",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Circuit Board",
+                        "Quantity": 5
+                    },
+                    {
+                        "ItemName": "Heavy Modular Frame",
+                        "Quantity": 1
+                    },
+                    {
+                        "ItemName": "Computer",
+                        "Quantity": 1
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Modular Engine",
+        "Tier": 5,
+        "Stack": 50,
+        "SinkPoints": 9960,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Motor",
+                        "Quantity": 2
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Smart Plating",
+                        "Quantity": 2
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "FICSMAS Wonder Star",
+        "Tier": 5,
+        "Stack": 100,
+        "SinkPoints": 2,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "FICSMAS Decoration",
+                        "Quantity": 5
+                    },
+                    {
+                        "ItemName": "Candy Cane",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Fused Modular Frame",
+        "Tier": 6,
+        "Stack": 50,
+        "SinkPoints": 62840,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Heavy Modular Frame",
+                        "Quantity": 1.5
+                    },
+                    {
+                        "ItemName": "Aluminum Casing",
+                        "Quantity": 75
+                    },
+                    {
+                        "ItemName": "Nitrogen Gas",
+                        "Quantity": 37.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Heat-Fused Frame",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Heavy Modular Frame",
+                        "Quantity": 3
+                    },
+                    {
+                        "ItemName": "Aluminum Ingot",
+                        "Quantity": 150
+                    },
+                    {
+                        "ItemName": "Nitric Acid",
+                        "Quantity": 24
+                    },
+                    {
+                        "ItemName": "Fuel",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Cooling System",
+        "Tier": 6,
+        "Stack": 100,
+        "SinkPoints": 12006,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Heat Sink",
+                        "Quantity": 12
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 12
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Nitrogen Gas",
+                        "Quantity": 150
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 6,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Cooling Device",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Heat Sink",
+                        "Quantity": 9.38
+                    },
+                    {
+                        "ItemName": "Motor",
+                        "Quantity": 1.88
+                    },
+                    {
+                        "ItemName": "Nitrogen Gas",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Non-Fissle Uranium",
+        "Tier": 6,
+        "Stack": 500,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": true,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Nuclear Waste",
+                        "Quantity": 37.5
+                    },
+                    {
+                        "ItemName": "Silica",
+                        "Quantity": 25
+                    },
+                    {
+                        "ItemName": "Nitric Acid",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Sulfuric Acid",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 50,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Water",
+                                "Quantity": 15
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Fertile Uranium",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Nuclear Waste",
+                        "Quantity": 25
+                    },
+                    {
+                        "ItemName": "Uranium",
+                        "Quantity": 25
+                    },
+                    {
+                        "ItemName": "Nitric Acid",
+                        "Quantity": 15
+                    },
+                    {
+                        "ItemName": "Sulfuric Acid",
+                        "Quantity": 25
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 100,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Water",
+                                "Quantity": 40
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Assembly Director System",
+        "Tier": 6,
+        "Stack": 50,
+        "SinkPoints": 543632,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Adaptive Control Unit",
+                        "Quantity": 1.5
+                    },
+                    {
+                        "ItemName": "Super Computer",
+                        "Quantity": 0.75
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Magnetic Field Generator",
+        "Tier": 6,
+        "Stack": 50,
+        "SinkPoints": 15650,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Versatile Framework",
+                        "Quantity": 2.5
+                    },
+                    {
+                        "ItemName": "Electromagnetic Control Rod",
+                        "Quantity": 1
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Turbo Motor",
+        "Tier": 7,
+        "Stack": 50,
+        "SinkPoints": 242720,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Cooling System",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Radio Control Unit",
+                        "Quantity": 3.75
+                    },
+                    {
+                        "ItemName": "Motor",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Rubber",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1.88,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Turbo Electric Motor",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Motor",
+                        "Quantity": 6.56
+                    },
+                    {
+                        "ItemName": "Radio Control Unit",
+                        "Quantity": 8.44
+                    },
+                    {
+                        "ItemName": "Electromagnetic Control Rod",
+                        "Quantity": 4.69
+                    },
+                    {
+                        "ItemName": "Rotor",
+                        "Quantity": 6.56
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2.81,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Turbo Pressure Motor",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Motor",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Pressure Conversion Cube",
+                        "Quantity": 1.88
+                    },
+                    {
+                        "ItemName": "Packaged Nitrogen Gas",
+                        "Quantity": 45
+                    },
+                    {
+                        "ItemName": "Stator",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 3.75,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Pressure Conversion Cube",
+        "Tier": 7,
+        "Stack": 50,
+        "SinkPoints": 257312,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Fused Modular Frame",
+                        "Quantity": 1
+                    },
+                    {
+                        "ItemName": "Radio Control Unit",
+                        "Quantity": 2
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Plutonium Pellet",
+        "Tier": 7,
+        "Stack": 100,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": true,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Particle Accelerator",
+                "Input": [
+                    {
+                        "ItemName": "Non-Fissle Uranium",
+                        "Quantity": 100
+                    },
+                    {
+                        "ItemName": "Nuclear Waste",
+                        "Quantity": 25
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Encased Plutonium Cell",
+        "Tier": 7,
+        "Stack": 200,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": true,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Plutonium Pellet",
+                        "Quantity": 10
+                    },
+                    {
+                        "ItemName": "Concrete",
+                        "Quantity": 20
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Instant Plutonium Cell",
+                "Machine": "Particle Accelerator",
+                "Input": [
+                    {
+                        "ItemName": "Non-Fissle Uranium",
+                        "Quantity": 75
+                    },
+                    {
+                        "ItemName": "Aluminum Casing",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 10,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Plutonium Fuel Rod",
+        "Tier": 8,
+        "Stack": 50,
+        "SinkPoints": 153184,
+        "Form": "Solid",
+        "Radioactive": true,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Encased Plutonium Cell",
+                        "Quantity": 7.5
+                    },
+                    {
+                        "ItemName": "Steel Beam",
+                        "Quantity": 4.5
+                    },
+                    {
+                        "ItemName": "Electromagnetic Control Rod",
+                        "Quantity": 1.5
+                    },
+                    {
+                        "ItemName": "Heat Sink",
+                        "Quantity": 2.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0.25,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Plutonium Fuel Unit",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Encased Plutonium Cell",
+                        "Quantity": 10
+                    },
+                    {
+                        "ItemName": "Pressure Conversion Cube",
+                        "Quantity": 0.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Nuclear Pasta",
+        "Tier": 8,
+        "Stack": 50,
+        "SinkPoints": 543424,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Particle Accelerator",
+                "Input": [
+                    {
+                        "ItemName": "Copper Powder",
+                        "Quantity": 100
+                    },
+                    {
+                        "ItemName": "Pressure Conversion Cube",
+                        "Quantity": 0.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Thermal Propulsion Rocket",
+        "Tier": 8,
+        "Stack": 50,
+        "SinkPoints": 732956,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Modular Engine",
+                        "Quantity": 2.5
+                    },
+                    {
+                        "ItemName": "Turbo Motor",
+                        "Quantity": 1
+                    },
+                    {
+                        "ItemName": "Cooling System",
+                        "Quantity": 3
+                    },
+                    {
+                        "ItemName": "Fused Modular Frame",
+                        "Quantity": 1
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "??SAM Fluctuator??",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "",
+                "Input": [
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Ficsite Ingot",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "",
+                "Input": [
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Ficsite Trigon",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Ficsite Ingot",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Diamond",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Particle Accelerator",
+                "Input": [
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 600
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Time Crystal",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Converter",
+                "Input": [
+                    {
+                        "ItemName": "Diamond",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Superposition Oscillator",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Quantum Encoder",
+                "Input": [
+                    {
+                        "ItemName": "Alclad Aluminum Sheet",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Crystal Oscillator",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Dark Matter Crystal",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Excited Photonic Matter",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Dark Matter Residue",
+                                "Quantity": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Neural Quantum Processor",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Quantum Encoder",
+                "Input": [
+                    {
+                        "ItemName": "Ficsite Trigon",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Time Crystal",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Super Computer",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Excited Photonic Matter",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Dark Matter Residue",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Gaslike",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "",
+                "Input": [
+                    {
+                        "ItemName": "??SAM Fluctuator??",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Dark Matter Crystal",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "",
+                "Input": [
+                    {
+                        "ItemName": "Diamond",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Dark Matter Residue",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "AI Expansion Server",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Quantum Encoder",
+                "Input": [
+                    {
+                        "ItemName": "Excited Photonic Matter",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Superposition Oscillator",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Neural Quantum Processor",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Magnetic Field Generator",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Dark Matter Residue",
+                                "Quantity": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Synthentic Power Shard",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Quantum Encoder",
+                "Input": [
+                    {
+                        "ItemName": "Quartz Crystal",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Time Crystal",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Dark Matter Crystal",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Excited Photonic Matter",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Dark Matter Residue",
+                                "Quantity": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Ficsonium",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Particle Accelerator",
+                "Input": [
+                    {
+                        "ItemName": "Singularity Cell",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Plutonium Waste",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Dark Matter Residue",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Singularity Cell",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Iron Plate",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Concrete",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Dark Matter Crystal",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Nuclear Pasta",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "ItemName": "Ficsonium Fuel Rod",
+        "Tier": 100,
+        "Stack": 50,
+        "SinkPoints": 0,
+        "Form": "Solid",
+        "Radioactive": false,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Quantum Encoder",
+                "Input": [
+                    {
+                        "ItemName": "Ficsite Trigon",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Electromagnetic Control Rod",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Ficsonium",
+                        "Quantity": 0
+                    },
+                    {
+                        "ItemName": "Excited Photonic Matter",
+                        "Quantity": 0
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 0,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Dark Matter Residue",
+                                "Quantity": 0
+                            }
                         ]
                     }
                 ]
