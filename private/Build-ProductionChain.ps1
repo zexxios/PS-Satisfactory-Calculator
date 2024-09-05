@@ -56,7 +56,6 @@ function Build-ProductionChain {
             foreach ($InputItem in $SelectedRecipe.Input) {
                 $CalculateItemPM = $null
                 $CalculateItemPM = ($MachineCount * $InputItem.Quantity)
-                Write-Host "Need [$($CalculateItemPM)] $($InputItem.ItemName)"
 
                 if ($ProductionChains[0].ItemName -eq $ItemName) {
                     Build-ProductionChain -ItemName $InputItem.ItemName -NewChain -PerMinute $CalculateItemPM
