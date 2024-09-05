@@ -3,7 +3,7 @@ function New-FactoryBuild {
         [PSCustomObject]$FactoryDefinition
     )
     #Set variables
-    $ProductionChains = @()
+    $global:ProductionChains = @()
     $RecipeMultiplier = $null
     $RecipeMultiplier = ($FactoryDefinition.PerMinute / $FactoryDefinition.Recipe.Output.Quantity)
 

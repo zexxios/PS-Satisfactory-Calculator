@@ -1,6 +1,7 @@
 function New-UserPrompt {
     param (
         [switch]$StartBuild,
+        [PSCustomObject]$ItemPM,
         [PSCustomObject]$SelectRecipe
     )
     $NumberedList = @()
@@ -18,7 +19,8 @@ function New-UserPrompt {
                 Write-Host -ForegroundColor Blue " $($_.Name)"
             }
 
-            $ItemPrompt = Read-Host "Select item number to begin factory build ($($NumberedList[0].ID)-$($NumberedList[-1].ID))"
+            Write-Host -ForegroundColor Cyan "Select item number to begin factory build ($($NumberedList[0].ID)-$($NumberedList[-1].ID)): " -NoNewLine
+            $ItemPrompt = Read-Host
             $ItemSelection = Invoke-CloneObject -InputObject ($global:ConfigMaster.Items | Where-Object {$_.ItemName -eq "$(($NumberedList | Where-Object {$_.ID -eq $ItemPrompt}).Name)"})
 
             if ($ItemSelection.Recipes.Count -gt 1) {
@@ -77,36 +79,81 @@ function New-UserPrompt {
             }
         }
 
+    } elseif ($ItemPM) {
+        do {
+            $ResponseSuccess = $null
+            Write-Host -ForegroundColor Yellow "How many [$($ItemPM.ItemName)] per minute?: " -NoNewLine
+            $PerMinute = Read-Host
+
+            if ($PerMinute) {
+                $ResponseSuccess = $true
+
+            } else {
+                Write-Host -ForegroundColor Red "Invalid, try again"
+            }
+
+        } until ($ResponseSuccess -eq $true)
+        
+        if ($PerMinute) {
+            Write-Output $PerMinute
+        }
+
     } elseif ($SelectRecipe) {
         $NumberedList = Get-NumberedList -Object $SelectRecipe.Recipes
 
-        $i = 1
-        $NumberedList | Foreach-Object {
-            Write-Host -ForegroundColor DarkGray "===================================="
-            Write-Host -ForegroundColor Yellow "[$($_.ID)]" -NoNewline
-            Write-Host -ForegroundColor Green " - $($_.Name.Name) - $($_.Name.Output.Quantity) per min"
-            Write-Host ""
-            Write-Host -ForegroundColor DarkCyan "Inputs:"
-            $_.Name.Input | Foreach-Object {
-                Write-Host -ForegroundColor DarkCyan "  [$($_.Quantity)]-[$($_.ItemName)]"
-            }
+        do {
+            $ResponseSuccess = $null
 
-            if ($_.Name.Output.Byproduct.Count -ge 1) {
-                Write-Host ""
-                Write-Host -ForegroundColor DarkRed "Byproduct Warning"
-                $_.Name.Output.Byproduct | Foreach-Object {
-                    Write-Host -ForegroundColor DarkRed "  [$($_.Quantity)]-[$($_.ItemName)]"
+            if (!$RecipeSelection -or $RecipeSelection -eq "list") {
+                $i = 1
+                $NumberedList | Foreach-Object {
+                    Write-Host -ForegroundColor DarkGreen "¤━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━¤"
+                    #Output header for recipe
+                    Write-Host -ForegroundColor Yellow "[$($_.ID)]" -NoNewline
+                    Write-Host -ForegroundColor DarkYellow " $($_.Name.Name) Recipe"
+                    Write-Host -ForegroundColor DarkGray "-------------------------"
+
+                    #Output machine and items per minute
+                    Write-Host -ForegroundColor White "[Output]"
+                    Write-Host -ForegroundColor Green "  [$($_.Name.Output.Quantity)] per min"
+                    Write-Host ""
+                    Write-Host -ForegroundColor White "[Input]"
+                    $_.Name.Input | Foreach-Object {
+                        Write-Host -ForegroundColor DarkCyan "  [$($_.Quantity)] $($_.ItemName)"
+                    }
+
+                    if ($_.Name.Output.Byproduct.Count -ge 1) {
+                        Write-Host ""
+                        Write-Host -ForegroundColor DarkRed "[Byproduct]"
+                        $_.Name.Output.Byproduct | Foreach-Object {
+                            Write-Host -ForegroundColor DarkRed "  [$($_.Quantity)] $($_.ItemName)"
+                        }
+                    }
+                    Write-Host ""
+                    Write-Host -ForegroundColor White "[Machine]" -NoNewLine
+                    Write-Host -ForegroundColor DarkBlue " $($_.Name.Machine)"
+                    Write-Host ""
+
+                    if ($i -eq $NumberedList.Count) {
+                        Write-Host -ForegroundColor DarkGreen "¤━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━¤"
+                    }
+
+                    $i++
                 }
             }
 
-            if ($i -eq $NumberedList.Count) {
-                Write-Host -ForegroundColor DarkGray "===================================="
+            Write-Host -ForegroundColor Yellow "Select recipe # to use ($($NumberedList[0].ID) - $($NumberedList[-1].ID)): " -NoNewLine
+            $RecipeSelection = Read-Host
+
+            if (($RecipeSelection -ge $NumberedList[0].ID) -and ($RecipeSelection -le $NumberedList[-1].ID)) {
+                $ResponseSuccess = $true
+
+            } elseif ($RecipeSelection -ne "list") {
+                Write-Host -ForegroundColor Red "Invalid selection, try again (type 'list' to list recipes again)"
             }
 
-            $i++
-        }
-
-        $RecipeSelection = Read-Host "Select recipe # to use ($($NumberedList[0].ID) - $($NumberedList[-1].ID))"
+        } until ($ResponseSuccess -eq $true)
+        
         $RecipeSelection = $SelectRecipe.Recipes | Where-Object {$_.Name -eq "$(($NumberedList | Where-Object {$_.ID -eq $RecipeSelection}).Name.Name)"}
 
         Write-Output $RecipeSelection

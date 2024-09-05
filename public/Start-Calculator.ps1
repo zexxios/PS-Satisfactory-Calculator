@@ -1,5 +1,5 @@
 #Set variables
-$ScriptPath = "C:\Users\Zac\OneDrive - Zac McKenna Enterprises\VSCode\GitHub\satsifactorycalculator"
+$ScriptPath = (Get-Location).Path
 
 #Import all JSON files
 if ((Test-Path -Path $ScriptPath) -eq $true) {
@@ -16,9 +16,11 @@ if ((Test-Path -Path $ScriptPath) -eq $true) {
         $global:ConfigMaster.Add($ConfigName,$FileContent)
     }
 }
+$global:FactoryBuilds = @()
+$global:ProductionChains = @()
 
 #Prompt user to select item or type item name
-$FactoryDefinition = New-UserPrompt -ListItems
+$global:FactoryDefinition = New-UserPrompt -StartBuild
 
 #Build the factory
 if ($FactoryItem) {

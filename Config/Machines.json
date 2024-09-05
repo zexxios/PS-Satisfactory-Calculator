@@ -1,54 +1,57 @@
 [
     {
         "Name": "Smelter",
-        "BasePower": "4",
-        "OverclockPower": {
-            "25": ".64",
-            "50": "1.6",
-            "75": "2.73",
-            "150": "6.84",
-            "200": "10",
-            "250": "13.43"
-        }
+        "PowerMin": 4,
+        "PowerMax": 4
     },
     {
         "Name": "Constructor",
-        "BasePower": "4"
+        "PowerMin": 4,
+        "PowerMax": 4
     },
     {
         "Name": "Assembler",
-        "BasePower": "15"
+        "PowerMin": 15,
+        "PowerMax": 15
     },
     {
         "Name": "Foundry",
-        "BasePower": "16"
+        "PowerMin": 16,
+        "PowerMax": 16
     },
     {
         "Name": "Refinery",
-        "BasePower": "30"
+        "PowerMin": 30,
+        "PowerMax": 30
     },
     {
         "Name": "Manufacturer",
-        "BasePower": "55"
+        "PowerMin": 55,
+        "PowerMax": 55
     },
     {
         "Name": "Blender",
-        "BasePower": "55"
+        "PowerMin": 55,
+        "PowerMax": 55
     },
     {
         "Name": "Packager",
-        "BasePower": "4"
+        "PowerMin": 4,
+        "PowerMax": 4
     },
     {
         "Name": "Particle Accelerator",
-        "BasePower": "500-1500"
+        "PowerMin": 500,
+        "PowerMax": 1500
     },
     {
         "Name": "Quantum Encoder",
-        "BasePower": "4"
+        "PowerMin": 500,
+        "PowerMax": 1500
     },
     {
         "Name": "Converter",
-        "BasePower": "4"
+        "PowerMin": 500,
+        "PowerMax": 1500
     }
 ]
