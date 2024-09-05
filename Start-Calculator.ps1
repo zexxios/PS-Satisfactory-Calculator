@@ -16,6 +16,7 @@ if ((Test-Path -Path $ScriptPath) -eq $true) {
         $global:ConfigMaster.Add($ConfigName,$FileContent)
     }
 }
+
 $global:FactoryBuilds = @()
 $global:ProductionChains = @()
 
