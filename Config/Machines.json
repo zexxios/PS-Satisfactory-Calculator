@@ -1,43 +1,35 @@
 [
     {
         "Name": "Smelter",
-        "PowerMin": 4,
-        "PowerMax": 4
+        "Power": 4
     },
     {
         "Name": "Constructor",
-        "PowerMin": 4,
-        "PowerMax": 4
+        "Power": 4
     },
     {
         "Name": "Assembler",
-        "PowerMin": 15,
-        "PowerMax": 15
+        "Power": 15
     },
     {
         "Name": "Foundry",
-        "PowerMin": 16,
-        "PowerMax": 16
+        "Power": 16
     },
     {
         "Name": "Refinery",
-        "PowerMin": 30,
-        "PowerMax": 30
+        "Power": 30
     },
     {
         "Name": "Manufacturer",
-        "PowerMin": 55,
-        "PowerMax": 55
+        "Power": 55
     },
     {
         "Name": "Blender",
-        "PowerMin": 55,
-        "PowerMax": 55
+        "Power": 55
     },
     {
         "Name": "Packager",
-        "PowerMin": 4,
-        "PowerMax": 4
+        "Power": 4
     },
     {
         "Name": "Particle Accelerator",
@@ -53,5 +45,9 @@
         "Name": "Converter",
         "PowerMin": 500,
         "PowerMax": 1500
+    },
+    {
+        "Name": "Power Augumenter",
+        "Power": 0
     }
 ]
