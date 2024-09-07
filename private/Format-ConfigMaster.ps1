@@ -3,8 +3,16 @@ function Format-ConfigMaster {
     if ($global:ConfigMaster.Items) {
         $ItemswithIDs = @()
 
+        if ($global:RunSettings.Preferences.ExcludeEventItems -eq $true) {
+            Write-Host -ForegroundColor Cyan "User preferences are set to exclude events, filtering item list"
+            $AllItems = $global:ConfigMaster.Items | Where-Object {$_.Tags -notcontains "Event"}
+
+        } else {
+            $AllItems = $global:ConfigMaster.Items
+        }
+
         $i = 1
-        $ConfigMaster.Items | Sort-Object ItemName | Foreach-Object {
+        $AllItems | Sort-Object ItemName | Foreach-Object {
 
             $Recipes = @()
             $r = 1
@@ -41,7 +49,7 @@ function Format-ConfigMaster {
             }            
         }
 
-        if ($global:ConfigMaster.Items.Count -eq $ItemsWithIDs.Count) {
+        if ($AllItems.Count -eq $ItemsWithIDs.Count) {
             $global:ConfigMaster.Remove("Items")
             $global:ConfigMaster.Add("Items",$ItemswithIDs)
         }

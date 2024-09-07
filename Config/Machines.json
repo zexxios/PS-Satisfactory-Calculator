@@ -29,7 +29,7 @@
     },
     {
         "Name": "Packager",
-        "Power": 4
+        "Power": 10
     },
     {
         "Name": "Particle Accelerator",
@@ -47,7 +47,28 @@
         "PowerMax": 1500
     },
     {
-        "Name": "Power Augumenter",
-        "Power": 0
+        "Name": "Water Extractor",
+        "Power": 20,
+        "Output": 120
+    },
+    {
+        "Name": "Oil Extractor",
+        "Power": 40,
+        "Output": 120
+    },
+    {
+        "Name": "Miner MK1",
+        "Power": 5,
+        "Output": 60
+    },
+    {
+        "Name": "Miner MK2",
+        "Power": 12,
+        "Output": 120
+    },
+    {
+        "Name": "Miner MK3",
+        "Power": 30,
+        "Output": 240
     }
 ]
