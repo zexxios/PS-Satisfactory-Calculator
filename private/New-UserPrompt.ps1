@@ -2,7 +2,7 @@ function New-UserPrompt {
     param (
         [switch]$Start,
         [switch]$ProjectDirectory,
-        [switch]$NewProjectStart,
+        [switch]$NewProject,
         [switch]$ExistingProject,
         [switch]$Recipe,
         [switch]$Byproduct,
@@ -25,7 +25,7 @@ function New-UserPrompt {
         }
 
         #Set options for prompt
-        $Options = "New project", "Reopen existing project", "Edit existing user preferences", "Exit calculator"
+        $Options = "New project", "Reopen existing project", "Edit user preferences", "Exit"
         $PromptArray = New-PromptArray -Options $Options
 
         do {
@@ -62,10 +62,15 @@ function New-UserPrompt {
                 } elseif ($Selection.ID -eq 3) {
                     Write-Host -ForegroundColor Green "Starting configuration of user preferences..."
                     $global:RunSettings.Mode = "UserConfig"
+
+                } elseif ($Selection.ID -eq 4) {
+                    Write-Host -ForegroundColor Green "Exiting calculator..."
+                    $global:RunSettings.Mode = "Exit"
+                    $global:CloseCalculator = $true
                 }
             }
 
-            if ($global:RunSettings.Mode) {
+            if ($global:RunSettings.Mode -and $global:RunSettings.Mode -ne "Exit") {
                 do {
                     $WorkCompleted = $null
                     Write-Host ""
@@ -85,15 +90,25 @@ function New-UserPrompt {
                         }
                         
                         if ($PreferenceResponse -match "Y") {
-                            Write-Host -ForegroundColor Blue "Provide the full file path to existing user preference file: " -NoNewline
-                            $FilePath = Read-Host
+                            Write-Host ""
+                            Write-Host -ForegroundColor Yellow "Select your preferences file (Dialog box for selection may be under this window)"
+                            $FilePath = Get-FilePath -JSON -Title "Select JSON preference file"
 
                             if ((Test-Path -Path $FilePath -PathType Leaf) -eq $true) {
                                 $global:RunSettings.Preferences = Get-Content -Path $FilePath | ConvertFrom-JSON
+
+                                #Set new file path if file was moved
+                                if ($FilePath -ne $global:RunSettings.Preferences.FilePath) {
+                                    $RunSettings.Preferences.FilePath = $FilePath
+                                }
                                 
                                 if ((Test-Path -Path $global:RunSettings.Preferences.ProjectDirectory) -eq $false) {
                                     Write-Host -ForegroundColor Red "Unable to validate path to project files in user file"
                                     Set-Preferences -Path $FilePath
+
+                                } else {
+                                    Write-Host ""
+                                    Write-Host -ForegroundColor Green "Successfully imported user preferences"
                                 }
 
                             } else {
@@ -102,8 +117,9 @@ function New-UserPrompt {
                             }
 
                         } elseif ($PreferenceResponse -match "N") {
-                            Write-Host -ForegroundColor Blue "Provide a path to save the user preference file (File will be created in this directory): " -NoNewLine
-                            $FolderPath = Read-Host
+                            Write-Host -ForegroundColor Blue "Provide a path to save the user preference file (File will be created in this directory)"
+                            Write-Host ""
+                            $FolderPath = Get-FolderPath -Description "Provide a folder path to save user preference file"
 
                             if ((Test-Path -Path $FolderPath) -eq $true) {
                                 $FilePath = Set-Preferences -New -Path $FolderPath -User
@@ -121,6 +137,25 @@ function New-UserPrompt {
 
                     #Import files for existing projects or run user setting configuration
                     if ($global:RunSettings.Preferences) {
+                        $AllProjects = (Get-ChildItem -Path $global:RunSettings.Preferences.ProjectDirectory -Recurse | Where-Object {$_.Name -match ".xml"}) | Select-Object Name,FullName
+
+                        if ($AllProjects.Count -ge 1) {
+                            $AllProjects | Foreach-Object {
+                                $ProjectContents = $null
+                                $ProjectContents = Import-CLIXML -Path $_.FullName
+                                $FilePath = $_.FullName
+                                
+                                if ($ProjectContents.FilePath -ne $FilePath) {
+                                    Write-Host "$($FilePath)"
+                                    $ProjectContents.FilePath = $FilePath
+                                }
+
+                                $global:RunSettings.Projects += $ProjectContents
+                            }
+
+                            Write-Host -ForegroundColor Green "Found and imported [$($global:RunSettings.Projects.Count)] existing projects"
+                        }
+
                         if ($global:RunSettings.Mode -eq "Existing") {
                             $AllProjects = (Get-ChildItem -Path $global:RunSettings.Preferences.ProjectDirectory -Recurse | Where-Object {($_.Name -match ".xml")}) | Select-Object Name,FullName
 
@@ -140,16 +175,19 @@ function New-UserPrompt {
                                 }
 
                             } else {
-                                Write-Host -ForegroundColor Yellow "No project files were found in the directory"
+                                Write-Host -ForegroundColor Red "No project files were found in the directory specified in user preferences [$($global:RunSettings.Preferences.ProjectDirectory)]"
+                                $global:RunSettings.Mode = $null
                             }
 
                         } elseif ($global:RunSettings.Mode -eq "UserConfig") {
                             Set-Preferences -Path $FilePath
-                            $WorkCompleted = $true
                             $global:RunSettings.Mode = $null
                         }
 
                         $WorkCompleted = $true
+
+                    } else {
+
                     }
         
                 } until ($WorkCompleted -eq $true)
@@ -157,8 +195,7 @@ function New-UserPrompt {
 
         } until ($global:RunSettings.Mode)
 
-
-    } elseif ($NewProjectStart) {
+    } elseif ($NewProject) {
         $NewProject = [PSCustomObject]@{
             ID = (New-GUID).Guid
             Name = $null
@@ -175,6 +212,7 @@ function New-UserPrompt {
                 Recipes = @()
             }
             Tags = @()
+            FilePath = $null
         }
 
         do {
@@ -261,14 +299,30 @@ function New-UserPrompt {
             }
 
             if ($NewProject.Name -and $NewProject.Item -and $NewProject.Quantity) {
-                Write-Host -ForegroundColor Green "New project [$($NewProject.Name)] will build a factory making $($NewProject.Quantity) $($NewProject.Item) per minute.  Proceed? (Y or N): " -NoNewLine
+                Write-Host -ForegroundColor DarkGray "-------------------------"
+                Write-Host -ForegroundColor DarkGreen "New Project Configuration"
+                Write-Host -ForegroundColor DarkGray "-------------------------"
+                Write-Host -ForegroundColor DarkGray "Name"
+                Write-Host -ForegroundColor Cyan "   $($NewProject.Name)"
+                Write-Host ""
+                Write-Host -ForegroundColor DarkGray "Making"
+                Write-Host -ForegroundColor Cyan "   $($NewProject.Item)"
+                Write-Host ""
+                Write-Host -ForegroundColor DarkGray "Rate"
+                Write-Host -ForegroundColor Cyan "   $($NewProject.Quantity) per min"
+                Write-Host ""
+                Write-Host -ForegroundColor DarkGray "Miner"
+                Write-Host -ForegroundColor Cyan "   $($NewProject.Preferences.Miner)"
+                Write-Host -ForegroundColor DarkGray "-------------------------"
+                Write-Host ""
+                Write-Host -ForegroundColor Blue "Proceed with project creation? (Y or N): " -NoNewLine
                 $Response = Read-Host
 
                 if ($Response -match "Y") {
                     $Success = $true
 
                 } elseif ($Response -match "N") {
-                    Write-Host -ForegroundColor Yellow "Restarting prompts"
+                    Write-Host -ForegroundColor Yellow "Restarting project prompts"
                     $NewProject.Name = $null
                     $NewProject.Item = $null
                     $NewProject.Quantity = $null
@@ -441,6 +495,6 @@ function New-UserPrompt {
 
         
     } elseif ($End) {
-
+        
     }
 }

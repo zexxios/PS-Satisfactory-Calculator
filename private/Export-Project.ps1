@@ -22,7 +22,7 @@ function Export-Project {
         }
 
         if (($Selection -eq "HTML") -or ($Selection -eq "All")) {
-
+            
         }
 
         $UserResponse = $null
@@ -30,5 +30,6 @@ function Export-Project {
 
     } else {
         #Final export of the project
+        $global:ActiveProject | Export-CLIXML -Path "$($global:RunSettings.Preferences)"
     }
 }
