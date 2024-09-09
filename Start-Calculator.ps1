@@ -1,4 +1,5 @@
 $global:RunSettings = $null
+$global:CloseCalculator = $null
 
 #Create functions for prompting folder and file path via Windows explorer
 function Get-FolderPath {
@@ -45,13 +46,11 @@ function Get-FilePath {
 }
 
 #Prompt for working directory
-$global:CloseCalculator = $null
-
-Write-Host -ForegroundColor Cyan "\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"
-Write-Host -ForegroundColor Cyan "Welcome to the Satisfactory Calculator"
+Write-Host -ForegroundColor Cyan "///////////////////////////////////////////////////////////"
+Write-Host -ForegroundColor Cyan "Powershell Satisfactory Calculator"
+Write-Host -ForegroundColor DarkGray "Documentation available at https://github.com/zexxios/PS-Satisfactory-Calculator"
 Write-Host -ForegroundColor DarkGray "Developed by Zexxios"
-Write-Host -ForegroundColor DarkGray "Documentation available at https://github.com/zexxios/satisfactorycalculator"
-Write-Host -ForegroundColor Cyan "\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"
+Write-Host -ForegroundColor Cyan "///////////////////////////////////////////////////////////"
 Write-Host ""
 
 if (Get-ChildItem -Path "$((Get-Location).Path)\Start-Calculator.ps1" -ErrorAction SilentlyContinue) {
@@ -165,7 +164,9 @@ do {
             }
             
         } elseif ($global:RunSettings.Mode -eq "Existing") {
-            $NewProject = New-UserPrompt -NewProjectStart
+            $NewProject = New-UserPrompt -ExistingProjectStart
+
+
         }
 
     } else {

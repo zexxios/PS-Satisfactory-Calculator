@@ -2,8 +2,8 @@ function New-UserPrompt {
     param (
         [switch]$Start,
         [switch]$ProjectDirectory,
-        [switch]$NewProject,
-        [switch]$ExistingProject,
+        [switch]$NewProjectStart,
+        [switch]$ExistingProjectStart,
         [switch]$Recipe,
         [switch]$Byproduct,
         [switch]$Reports,
@@ -70,14 +70,11 @@ function New-UserPrompt {
                 }
             }
 
-            if ($global:RunSettings.Mode -and $global:RunSettings.Mode -ne "Exit") {
+            if ($global:RunSettings.Mode) {
                 do {
-                    $WorkCompleted = $null
                     Write-Host ""
-                    if (!$global:RunSettings.Preferences) {
-                        $FilePath = $null
-                        $FolderPath = $null
 
+                    if (!$global:RunSettings.Preferences) {
                         #Prompt user for preference file import
                         if ($global:RunSettings.Mode -eq "UserConfig") {
                             $PreferenceResponse = "Y"
@@ -94,31 +91,34 @@ function New-UserPrompt {
                             Write-Host -ForegroundColor Yellow "Select your preferences file (Dialog box for selection may be under this window)"
                             $FilePath = Get-FilePath -JSON -Title "Select JSON preference file"
 
-                            if ((Test-Path -Path $FilePath -PathType Leaf) -eq $true) {
-                                $global:RunSettings.Preferences = Get-Content -Path $FilePath | ConvertFrom-JSON
+                            if ($FilePath) {
+                                try {
+                                    $global:RunSettings.Preferences = Get-Content -Path $FilePath | ConvertFrom-JSON
 
-                                #Set new file path if file was moved
-                                if ($FilePath -ne $global:RunSettings.Preferences.FilePath) {
-                                    $RunSettings.Preferences.FilePath = $FilePath
-                                }
-                                
-                                if ((Test-Path -Path $global:RunSettings.Preferences.ProjectDirectory) -eq $false) {
-                                    Write-Host -ForegroundColor Red "Unable to validate path to project files in user file"
-                                    Set-Preferences -Path $FilePath
+                                    #Set new file path if file was moved
+                                    if ($FilePath -ne $global:RunSettings.Preferences.FilePath) {
+                                        $RunSettings.Preferences.FilePath = $FilePath
+                                    }
 
-                                } else {
-                                    Write-Host ""
                                     Write-Host -ForegroundColor Green "Successfully imported user preferences"
+
+                                } catch {
+                                    Write-Host -ForegroundColor Red "Error importing user preference file"
+                                    Write-Output $_
+                                }
+
+                                if ((Test-Path -Path $global:RunSettings.Preferences.ProjectDirectory) -eq $false) {
+                                    Write-Host -ForegroundColor Red "Project directory is no longer accessible, running user preference updater"
+                                    Set-Preferences -User
                                 }
 
                             } else {
-                                Write-Host -ForegroundColor Red "User preference file not found, try again"
-                                $FilePath = $null
+                                Write-Host -ForegroundColor Red "No preferences file was selected"
                             }
 
                         } elseif ($PreferenceResponse -match "N") {
-                            Write-Host -ForegroundColor Blue "Provide a path to save the user preference file (File will be created in this directory)"
                             Write-Host ""
+                            Write-Host -ForegroundColor Yellow "Provide a path to save the user preference file (File will be created in this directory)"
                             $FolderPath = Get-FolderPath -Description "Provide a folder path to save user preference file"
 
                             if ((Test-Path -Path $FolderPath) -eq $true) {
@@ -136,7 +136,8 @@ function New-UserPrompt {
                     }
 
                     #Import files for existing projects or run user setting configuration
-                    if ($global:RunSettings.Preferences) {
+                    if ($global:RunSettings.Preferences.ProjectDirectory) {
+                        Write-Host ""
                         $AllProjects = (Get-ChildItem -Path $global:RunSettings.Preferences.ProjectDirectory -Recurse | Where-Object {$_.Name -match ".xml"}) | Select-Object Name,FullName
 
                         if ($AllProjects.Count -ge 1) {
@@ -152,50 +153,24 @@ function New-UserPrompt {
 
                                 $global:RunSettings.Projects += $ProjectContents
                             }
-
+                            
                             Write-Host -ForegroundColor Green "Found and imported [$($global:RunSettings.Projects.Count)] existing projects"
                         }
 
-                        if ($global:RunSettings.Mode -eq "Existing") {
-                            $AllProjects = (Get-ChildItem -Path $global:RunSettings.Preferences.ProjectDirectory -Recurse | Where-Object {($_.Name -match ".xml")}) | Select-Object Name,FullName
-
-                            if ($AllProjects.Count -ge 1) {
-                                $AllProjects | Foreach-Object {
-                                    $ProjectContents = Import-CLIXML -Path $_.FullName
-
-                                    if ($ProjectContents.FilePath) {
-                                        $ProjectContents.FilePath = $_.FullName
-
-                                    } else {
-                                        $ProjectContents | Add-Member -MemberType "NoteProperty" -Name "FilePath" -Value $_.FullName
-                                    }
-
-                                    $global:RunSettings.Projects += $ProjectContents
-                                    Write-Host -ForegroundColor Green "Successfully imported project [$($ProjectContents.Name)] with ID [$($ProjectContents.ID)]"
-                                }
-
-                            } else {
-                                Write-Host -ForegroundColor Red "No project files were found in the directory specified in user preferences [$($global:RunSettings.Preferences.ProjectDirectory)]"
-                                $global:RunSettings.Mode = $null
-                            }
-
-                        } elseif ($global:RunSettings.Mode -eq "UserConfig") {
+                        if ($global:RunSettings.Mode -eq "UserConfig") {
                             Set-Preferences -Path $FilePath
                             $global:RunSettings.Mode = $null
                         }
 
-                        $WorkCompleted = $true
-
-                    } else {
-
+                        $SetupCompleted = $true
                     }
-        
-                } until ($WorkCompleted -eq $true)
+
+                } until ($SetupCompleted -eq $true)
             }
 
-        } until ($global:RunSettings.Mode)
+        } until (($SetupCompleted -eq $true) -or ($global:CloseCalculator -eq $true))
 
-    } elseif ($NewProject) {
+    } elseif ($NewProjectStart) {
         $NewProject = [PSCustomObject]@{
             ID = (New-GUID).Guid
             Name = $null
@@ -337,7 +312,7 @@ function New-UserPrompt {
 
         Write-Output $NewProject
 
-    } elseif ($ExistingProject) {
+    } elseif ($ExistingProjectStart) {
         $Options = $global:RunSettings.Projects.Name
         $PromptArray = New-PromptArray -Options $Options
 
@@ -350,57 +325,84 @@ function New-UserPrompt {
         $Object = Invoke-CloneObject -InputObject $Object
         $AllRecipes = $Object.Recipes
 
+        $l = 0
         do {
             $UserSelection = $null
 
-            Write-Host -ForegroundColor Cyan "[$($Object.Name)] has multiple recipes available, select one to use in the production line (type 'help'): " -NoNewLine
-            $UserResponse = Read-Host
+            if ($l -eq 0) {
+                Write-Host ""
+                $UserResponse = "l"
 
+            } else {
+                if ($l -eq 1) {
+                    Write-Host -ForegroundColor DarkGray "Commands: d (detail), l (list), h (help)"
+                }
+
+                Write-Host -ForegroundColor Blue "Select recipe to make [$($Object.Name)]: " -NoNewLine
+                $UserResponse = Read-Host
+            }
+            
             $i = 1
             if ($UserResponse -eq "help" -or $UserResponse -eq "h") {
                 Write-Host ""
-                Write-Host -ForegroundColor DarkGray "Use 'list' to see recipes, use 'detail' to see everything in the recipe"
-                Write-Host -ForegroundColor DarkGray "Select the ID or the name of the recipe to continue"
+                Write-Host -ForegroundColor DarkGray "Use 'list' to see recipe names, use 'detail' to see all specifics"
+                Write-Host -ForegroundColor DarkGray "Type the # or type the name of the recipe to select it"
                 Write-Host ""
 
             } elseif ($UserResponse -eq "detail" -or $UserResponse -eq "d") {
                 $AllRecipes | Foreach-Object {
                     Write-Host ""
-                    Write-Host -ForegroundColor DarkGray "-------------------------"
                     #Output header for recipe
-                    Write-Host -ForegroundColor Yellow "[$($_.ID)]" -NoNewline
-                    Write-Host -ForegroundColor DarkYellow " $($_.Name)"
                     Write-Host -ForegroundColor DarkGray "-------------------------"
-        
+                    Write-Host -ForegroundColor Yellow "[$($_.ID)]" -NoNewline
+                    Write-Host -ForegroundColor Blue " $($_.Name)"
+                    Write-Host -ForegroundColor DarkGray "-------------------------"
+                    Write-Host -ForegroundColor DarkGray "//// " -NoNewLine
+                    Write-Host -ForegroundColor White " $($_.Machine) " -NoNewLine
+                    Write-Host -ForegroundColor DarkGray " \\\\"
+                    
+                    Write-Host -ForegroundColor DarkGray ""
+
                     #Output machine and items per minute
-                    Write-Host -ForegroundColor White "[Output]"
-                    Write-Host -ForegroundColor Green "  $($_.Output.Quantity) per min"
-                    Write-Host ""
-                    Write-Host -ForegroundColor White "[Input]"
-                    $_.Input | Foreach-Object {
-                        Write-Host -ForegroundColor DarkCyan "  $($_.Quantity) $($_.ItemName) per min"
+                    if ($_.Output.Byproduct.Count -ge 1) {
+                        Write-Host -ForegroundColor White " [Outputs]" -NoNewLine
+                        Write-Host -ForegroundColor DarkGray " per minute"
+                        Write-Host -ForegroundColor Green "     $($_.Output.Quantity) $($Object.Name)"
+                        $_.Output.Byproduct | Foreach-Object {
+                            Write-Host -ForegroundColor DarkRed "     $($_.Quantity) $($_.ItemName) [Byproduct]"
+                        }
+
+                    } else {
+                        Write-Host -ForegroundColor White " [Output]" -NoNewLine
+                        Write-Host -ForegroundColor DarkGray " per minute"
+                        Write-Host -ForegroundColor Green "     $($_.Output.Quantity) $($Object.Name)"
                     }
         
-                    if ($_.Output.Byproduct.Count -ge 1) {
+                    if ($_.Input.Count -gt 1) {
                         Write-Host ""
-                        Write-Host -ForegroundColor DarkRed "[Byproduct]"
-                        $_.Output.Byproduct | Foreach-Object {
-                            Write-Host -ForegroundColor DarkRed "  $($_.Quantity) $($_.ItemName) per min"
+                        Write-Host -ForegroundColor White " [Inputs]" -NoNewLine
+                        Write-Host -ForegroundColor DarkGray " per minute"
+                        $_.Input | Foreach-Object {
+                            Write-Host -ForegroundColor DarkCyan "     $($_.Quantity) $($_.ItemName)"
+                        }
+                    } else {
+                        Write-Host ""
+                        Write-Host -ForegroundColor White " [Input]" -NoNewLine
+                        Write-Host -ForegroundColor DarkGray " per minute"
+                        $_.Input | Foreach-Object {
+                            Write-Host -ForegroundColor DarkCyan "     $($_.Quantity) $($_.ItemName)"
                         }
                     }
-                    Write-Host ""
-                    Write-Host -ForegroundColor White "[Machine]" -NoNewLine
-                    Write-Host -ForegroundColor DarkBlue " $($_.Machine)"
         
                     if ($i -eq $AllRecipes.Count) {
-                        Write-Host -ForegroundColor DarkGray "___________________________"
+                        Write-Host -ForegroundColor DarkGray "-------------------------"
+                        Write-Host ""
                     }
-                    Write-Host ""
         
                     $i++
                 }
 
-            } elseif ($UserResponse -eq "list") {
+            } elseif (($UserResponse -eq "list") -or ($UserResponse -eq "l")) {
                 Write-Host ""
                 $AllRecipes | Foreach-Object {
                     Write-Host -ForegroundColor Yellow "[$($_.ID)]" -NoNewline
@@ -417,7 +419,9 @@ function New-UserPrompt {
             } else {
                 Write-Host -ForegroundColor Red "Invalid selection, try again"
             }
-            
+
+            $l++
+
         } until ($UserSelection)
 
         if ($UserSelection) {
@@ -427,7 +431,7 @@ function New-UserPrompt {
             do {
                 Write-Host ""
                 Write-Host -ForegroundColor DarkGray "Recipe can be added to a list so it won't prompt for selection in this project anymore"
-                Write-Host -ForegroundColor Blue "Add this recipe to the list? (Y or N): " -NoNewline
+                Write-Host -ForegroundColor Blue "Always use this recipe? (Y or N): " -NoNewline
                 $UserResponse = Read-Host
                 Write-Host ""
 
@@ -447,6 +451,8 @@ function New-UserPrompt {
         }
 
     } elseif ($Byproduct) {
+
+        
     } elseif ($Reports) {
         $Options = "CSV", "HTML", "All"
         $PromptArray = New-PromptArray -Options $Options

@@ -18,7 +18,7 @@ function Set-Preferences {
                 Recipes = @()
             }
     
-        } elseif ($Path) {
+        } else {
             $Preferences = Invoke-CloneObject ($global:RunSettings.Preferences)
         }
     
