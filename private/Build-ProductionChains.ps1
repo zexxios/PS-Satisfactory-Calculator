@@ -46,7 +46,7 @@ function Build-ProductionChains {
                 $MachineCount = ($PerMinute / $SelectedRecipe.Output.Quantity)
 
             } else {
-                $MachineMatch = Invoke-CloneObject -InputObject ($global:ConfigMaster.Machines | Where-Object {$_.Name -match $ItemMatch.Recipes.Machine})
+                $MachineMatch = Invoke-CloneObject -InputObject ($global:ConfigMaster.Buildables.Machines | Where-Object {$_.Name -match $ItemMatch.Recipes.Machine})
                 if ($MachineMatch.Count -gt 1) {
                     $MachineMatch = $MachineMatch | Where-Object {$_.Name -eq $global:ActiveProject.Preferences.Miner}
                     $SelectedRecipe.Machine = $MachineMatch.Name

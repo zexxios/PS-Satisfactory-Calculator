@@ -26,10 +26,16 @@ function Export-Project {
         }
 
         $UserResponse = $null
-        
 
     } else {
-        #Final export of the project
-        $global:ActiveProject | Export-CLIXML -Path "$($global:RunSettings.Preferences)"
+        try {
+            $global:ActiveProject | Export-CLIXML -Path $global:ActiveProject.FilePath -Force
+
+            Write-Host -ForegroundColor Green "Project has been exported to [$($global:ActiveProject.FilePath)]"
+            
+        } catch {
+            Write-Output "Unable to export project to file"
+            Write-Output $_
+        }
     }
 }

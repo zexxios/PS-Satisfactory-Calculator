@@ -58,8 +58,9 @@ if (Get-ChildItem -Path "$((Get-Location).Path)\Start-Calculator.ps1" -ErrorActi
 
 } else {
     do {
-        Write-Host -ForegroundColor Blue "Select the folder where the satisfactorycalculator is stored (Dialog box for selection may be under this window)"
+        Write-Host -ForegroundColor Yellow "Select the folder where the PS-Satisfactory-Calculator files are stored (Dialog box for selection may be under this window)..."
         $ScriptPath = Get-FolderPath -Description "Select root folder for the calculator files"
+        Write-Host ""
         
         if (!(Get-ChildItem -Path "$($ScriptPath)\Start-Calculator.ps1" -ErrorAction SilentlyContinue)) {
             Write-Host -ForegroundColor Red "Invalid folder path, try again"
@@ -93,26 +94,16 @@ if ((Test-Path -Path $ScriptPath) -eq $true) {
 do {
     $global:ActiveProject = $null
 
-    #Import all JSON files
-    $global:ConfigMaster = @{}
-    $AllConfigFiles = Get-ChildItem -Path "$($ScriptPath)\Config"
-
-    foreach ($File in $AllConfigFiles) {
-        $ConfigName = $null
-        $FileContent = $null
-
-        $ConfigName = $File.Name.Replace(".json","")
-        $FileContent = Get-Content -Path $File.FullName | ConvertFrom-Json
-
-        $global:ConfigMaster.Add($ConfigName,$FileContent)
-    }
-
     if ($global:ConfigMaster) {
         #Prompt user for run mode
         New-UserPrompt -Start
 
         #Format the config master to add IDs to all items and filter based on preferences
-        Format-ConfigMaster
+        Build-ConfigMaster
+
+        if ($global:RunSettings.Preferences.ProjectDirectory) {
+            Get-ProjectFiles
+        }
 
         if ($global:RunSettings.Mode -eq "New") {
             #Prompt user for project / factory build questions
@@ -154,9 +145,6 @@ do {
                             Build-ByproductChain
                         }
 
-                        #Generate CSV or HTML data if user wants it
-                        #Export-Project
-
                         #End factory build
                         New-UserPrompt -End
                     }
@@ -165,8 +153,6 @@ do {
             
         } elseif ($global:RunSettings.Mode -eq "Existing") {
             $NewProject = New-UserPrompt -ExistingProjectStart
-
-
         }
 
     } else {

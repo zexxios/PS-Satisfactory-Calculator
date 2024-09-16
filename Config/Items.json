@@ -763,6 +763,39 @@
                         ]
                     }
                 ]
+            },
+            {
+                "Name": "Synthetic Power Shard",
+                "Machine": "Quantum Encoder",
+                "Input": [
+                    {
+                        "ItemName": "Time Crystal",
+                        "Quantity": 10
+                    },
+                    {
+                        "ItemName": "Dark Matter Crystal",
+                        "Quantity": 10
+                    },
+                    {
+                        "ItemName": "Quartz Crystal",
+                        "Quantity": 60
+                    },
+                    {
+                        "ItemName": "Excited Photonic Matter",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 5,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Dark Matter Residue",
+                                "Quantity": 60
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "Properties": [
@@ -803,16 +836,16 @@
                 "Input": [
                     {
                         "ItemName": "Iron Ore",
-                        "Quantity": 20
+                        "Quantity": 40
                     },
                     {
                         "ItemName": "Copper Ore",
-                        "Quantity": 20
+                        "Quantity": 10
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 50,
+                        "Quantity": 75,
                         "Byproduct": [
                         ]
                     }
@@ -834,6 +867,48 @@
                 "Output": [
                     {
                         "Quantity": 65,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Leached Iron Ingot",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ore",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Sulfuric Acid",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 100,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Basic Iron Ingot",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ore",
+                        "Quantity": 25
+                    },
+                    {
+                        "ItemName": "Limestone",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 50,
                         "Byproduct": [
                         ]
                     }
@@ -882,7 +957,7 @@
                     },
                     {
                         "ItemName": "Iron Ore",
-                        "Quantity": 25
+                        "Quantity": 50
                     }
                 ],
                 "Output": [
@@ -909,6 +984,48 @@
                 "Output": [
                     {
                         "Quantity": 37.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Tempered Copper Ingot",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Copper Ore",
+                        "Quantity": 25
+                    },
+                    {
+                        "ItemName": "Petroleum Coke",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Leached Copper Ingot",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Copper Ore",
+                        "Quantity": 45
+                    },
+                    {
+                        "ItemName": "Sulfuric Acid",
+                        "Quantity": 25
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 110,
                         "Byproduct": [
                         ]
                     }
@@ -953,16 +1070,16 @@
                 "Input": [
                     {
                         "ItemName": "Limestone",
-                        "Quantity": 30
+                        "Quantity": 60
                     },
                     {
                         "ItemName": "Silica",
-                        "Quantity": 7.5
+                        "Quantity": 15
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 25,
+                        "Quantity": 50,
                         "Byproduct": [
                         ]
                     }
@@ -974,16 +1091,16 @@
                 "Input": [
                     {
                         "ItemName": "Limestone",
-                        "Quantity": 50
+                        "Quantity": 100
                     },
                     {
                         "ItemName": "Rubber",
-                        "Quantity": 10
+                        "Quantity": 20
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 45,
+                        "Quantity": 90,
                         "Byproduct": [
                         ]
                     }
@@ -1063,6 +1180,48 @@
                         ]
                     }
                 ]
+            },
+            {
+                "Name": "Tempered Caterium Ingot",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Caterium Ore",
+                        "Quantity": 45
+                    },
+                    {
+                        "ItemName": "Petroleum Coke",
+                        "Quantity": 15
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 22.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Leached Caterium Ingot",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Caterium Ore",
+                        "Quantity": 54
+                    },
+                    {
+                        "ItemName": "Sulfuric Acid",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 36,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
             }
         ],
         "Properties": [
@@ -1132,7 +1291,7 @@
                     },
                     {
                         "ItemName": "Coal",
-                        "Quantity": 50
+                        "Quantity": 40
                     }
                 ],
                 "Output": [
@@ -1149,16 +1308,16 @@
                 "Input": [
                     {
                         "ItemName": "Iron Ore",
-                        "Quantity": 22.5
+                        "Quantity": 5
                     },
                     {
                         "ItemName": "Compacted Coal",
-                        "Quantity": 11.25
+                        "Quantity": 2.5
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 37.5,
+                        "Quantity": 10,
                         "Byproduct": [
                         ]
                     }
@@ -1265,17 +1424,46 @@
                 "Input": [
                     {
                         "ItemName": "Raw Quartz",
-                        "Quantity": 11.25
+                        "Quantity": 22.5
                     },
                     {
                         "ItemName": "Limestone",
-                        "Quantity": 18.75
+                        "Quantity": 37.5
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 26.25,
+                        "Quantity": 52.5,
                         "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Distilled Silica",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Distilled Silica",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Limestone",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 100
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 270,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Water",
+                                "Quantity": 80
+                            }
                         ]
                     }
                 ]
@@ -1329,6 +1517,52 @@
                 "Output": [
                     {
                         "Quantity": 52.5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Quartz Purification",
+                "Machine": "Refinery",
+                "Input": [
+                    {
+                        "ItemName": "Raw Quartz",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Nitric Acid",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 75,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Dissolved Silica",
+                                "Quantity": 60
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Fused Quartz Crystal",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Raw Quartz",
+                        "Quantity": 75
+                    },
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 36
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 54,
                         "Byproduct": [
                         ]
                     }
@@ -1493,6 +1727,7 @@
             }
         ],
         "Tags": [
+            "Byproduct"
         ]
     },
     {
@@ -1530,6 +1765,7 @@
             }
         ],
         "Tags": [
+            "Byproduct"
         ]
     },
     {
@@ -1783,12 +2019,12 @@
                     },
                     {
                         "ItemName": "Compacted Coal",
-                        "Quantity": 3.75
+                        "Quantity": 15
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 15,
+                        "Quantity": 45,
                         "Byproduct": [
                         ]
                     }
@@ -2092,10 +2328,10 @@
                 "Input": [
                     {
                         "ItemName": "Coal",
-                        "Quantity": 37.5
+                        "Quantity": 30
                     },
                     {
-                        "ItemName": "Rubber",
+                        "ItemName": "Iron Plate",
                         "Quantity": 15
                     },
                     {
@@ -2116,7 +2352,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 830,
+                "SinkPoints": 608,
                 "Radioactive": false
             }
         ],
@@ -2322,7 +2558,7 @@
             {
                 "Form": "Solid",
                 "Stack": 100,
-                "SinkPoints": 225,
+                "SinkPoints": 170,
                 "Radioactive": false
             }
         ],
@@ -2377,7 +2613,7 @@
                 "Input": [
                     {
                         "ItemName": "Steel Ingot",
-                        "Quantity": 60
+                        "Quantity": 40
                     }
                 ],
                 "Output": [
@@ -2468,6 +2704,7 @@
             }
         ],
         "Tags": [
+            "Byproduct"
         ]
     },
     {
@@ -2528,10 +2765,6 @@
                     {
                         "Quantity": 20,
                         "Byproduct": [
-                            {
-                                "ItemName": "Sulfuric Acid",
-                                "Quantity": 10
-                            }
                         ]
                     }
                 ]
@@ -2736,11 +2969,11 @@
                 "Input": [
                     {
                         "ItemName": "Iron Ingot",
-                        "Quantity": 50
+                        "Quantity": 37.5
                     },
                     {
                         "ItemName": "Plastic",
-                        "Quantity": 10
+                        "Quantity": 7.5
                     }
                 ],
                 "Output": [
@@ -2752,16 +2985,16 @@
                 ]
             },
             {
-                "Name": "Steel Coated Plate",
-                "Machine": "Assembler",
+                "Name": "Steel Cast Plate",
+                "Machine": "Foundry",
                 "Input": [
                     {
                         "ItemName": "Steel Ingot",
-                        "Quantity": 7.5
+                        "Quantity": 15
                     },
                     {
-                        "ItemName": "Plastic",
-                        "Quantity": 5
+                        "ItemName": "Iron Ingot",
+                        "Quantity": 15
                     }
                 ],
                 "Output": [
@@ -2817,6 +3050,23 @@
                 "Output": [
                     {
                         "Quantity": 48,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Aluminum Rod",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Ingot",
+                        "Quantity": 7.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 52.5,
                         "Byproduct": [
                         ]
                     }
@@ -3117,6 +3367,44 @@
                         ]
                     }
                 ]
+            },
+            {
+                "Name": "Molded Steel Pipe",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Steel Ingot",
+                        "Quantity": 50
+                    },
+                    {
+                        "ItemName": "Concrete",
+                        "Quantity": 30
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 50,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Iron Pipe",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Iron Ingot",
+                        "Quantity": 100
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 25,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
             }
         ],
         "Properties": [
@@ -3146,6 +3434,44 @@
                 "Output": [
                     {
                         "Quantity": 15,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Molded Beam",
+                "Machine": "Foundry",
+                "Input": [
+                    {
+                        "ItemName": "Steel Ingot",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Concrete",
+                        "Quantity": 80
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 45,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Aluminum Beam",
+                "Machine": "Constructor",
+                "Input": [
+                    {
+                        "ItemName": "Aluminum Ingot",
+                        "Quantity": 22.5
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 22.5,
                         "Byproduct": [
                         ]
                     }
@@ -3621,7 +3947,7 @@
                 ],
                 "Output": [
                     {
-                        "Quantity": 5.63,
+                        "Quantity": 5.625,
                         "Byproduct": [
                         ]
                     }
@@ -3691,7 +4017,7 @@
                 "Input": [
                     {
                         "ItemName": "Steel Pipe",
-                        "Quantity": 30
+                        "Quantity": 10
                     },
                     {
                         "ItemName": "Wire",
@@ -3728,11 +4054,11 @@
                 "Input": [
                     {
                         "ItemName": "Steel Beam",
-                        "Quantity": 24
+                        "Quantity": 18
                     },
                     {
                         "ItemName": "Concrete",
-                        "Quantity": 30
+                        "Quantity": 36
                     }
                 ],
                 "Output": [
@@ -3749,7 +4075,7 @@
                 "Input": [
                     {
                         "ItemName": "Steel Pipe",
-                        "Quantity": 28
+                        "Quantity": 24
                     },
                     {
                         "ItemName": "Concrete",
@@ -3769,7 +4095,7 @@
             {
                 "Form": "Solid",
                 "Stack": 100,
-                "SinkPoints": 632,
+                "SinkPoints": 528,
                 "Radioactive": false
             }
         ],
@@ -3844,7 +4170,7 @@
                 "Input": [
                     {
                         "ItemName": "Copper Sheet",
-                        "Quantity": 27.5
+                        "Quantity": 25
                     },
                     {
                         "ItemName": "Quickwire",
@@ -3854,6 +4180,27 @@
                 "Output": [
                     {
                         "Quantity": 5,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Plastic AI Limiter",
+                "Machine": "Assembler",
+                "Input": [
+                    {
+                        "ItemName": "Quickwire",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Plastic",
+                        "Quantity": 28
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 8,
                         "Byproduct": [
                         ]
                     }
@@ -3944,11 +4291,11 @@
                 "Input": [
                     {
                         "ItemName": "Rubber",
-                        "Quantity": 30
+                        "Quantity": 20
                     },
                     {
                         "ItemName": "Petroleum Coke",
-                        "Quantity": 45
+                        "Quantity": 40
                     }
                 ],
                 "Output": [
@@ -4035,7 +4382,7 @@
             },
             {
                 "Name": "Diluted Packaged Fuel",
-                "Machine": "Packager",
+                "Machine": "Refinery",
                 "Input": [
                     {
                         "ItemName": "Heavy Oil Residue",
@@ -4097,6 +4444,43 @@
                 "Form": "Solid",
                 "Stack": 100,
                 "SinkPoints": 180,
+                "Radioactive": false
+            }
+        ],
+        "Tags": [
+        ]
+    },
+    {
+        "ItemName": "Packaged Ionized Fuel",
+        "Tier": 100,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Ionized Fuel",
+                        "Quantity": 80
+                    },
+                    {
+                        "ItemName": "Empty Fluid Tank",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 40,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Properties": [
+            {
+                "Form": "Solid",
+                "Stack": 100,
+                "SinkPoints": 5246,
                 "Radioactive": false
             }
         ],
@@ -4245,6 +4629,43 @@
                 "Form": "Solid",
                 "Stack": 100,
                 "SinkPoints": 180,
+                "Radioactive": false
+            }
+        ],
+        "Tags": [
+        ]
+    },
+    {
+        "ItemName": "Packaged Rocket Fuel",
+        "Tier": 100,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Packager",
+                "Input": [
+                    {
+                        "ItemName": "Rocket Fuel",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Empty Canister",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity":60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Properties": [
+            {
+                "Form": "Solid",
+                "Stack": 100,
+                "SinkPoints": 1028,
                 "Radioactive": false
             }
         ],
@@ -4907,16 +5328,16 @@
                     },
                     {
                         "ItemName": "Rubber",
-                        "Quantity": 13.13
+                        "Quantity": 13.125
                     },
                     {
                         "ItemName": "AI Limiter",
-                        "Quantity": 1.88
+                        "Quantity": 1.875
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 1.88,
+                        "Quantity": 1.875,
                         "Byproduct": [
                         ]
                     }
@@ -5101,19 +5522,15 @@
                 "Input": [
                     {
                         "ItemName": "Circuit Board",
-                        "Quantity": 25
+                        "Quantity": 10
                     },
                     {
                         "ItemName": "Cable",
-                        "Quantity": 22.5
+                        "Quantity": 20
                     },
                     {
                         "ItemName": "Plastic",
-                        "Quantity": 45
-                    },
-                    {
-                        "ItemName": "Screw",
-                        "Quantity": 130
+                        "Quantity": 40
                     }
                 ],
                 "Output": [
@@ -5130,15 +5547,15 @@
                 "Input": [
                     {
                         "ItemName": "Circuit Board",
-                        "Quantity": 26.25
+                        "Quantity": 15
                     },
                     {
                         "ItemName": "Quickwire",
-                        "Quantity": 105
+                        "Quantity": 52
                     },
                     {
                         "ItemName": "Rubber",
-                        "Quantity": 45
+                        "Quantity": 22.5
                     }
                 ],
                 "Output": [
@@ -5155,16 +5572,16 @@
                 "Input": [
                     {
                         "ItemName": "Circuit Board",
-                        "Quantity": 7.5
+                        "Quantity": 5
                     },
                     {
                         "ItemName": "Crystal Oscillator",
-                        "Quantity": 2.81
+                        "Quantity": 1.66667
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 2.81,
+                        "Quantity": 3.33333,
                         "Byproduct": [
                         ]
                     }
@@ -5175,7 +5592,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 17260,
+                "SinkPoints": 8352,
                 "Radioactive": false
             }
         ],
@@ -5196,11 +5613,11 @@
                     },
                     {
                         "ItemName": "Crystal Oscillator",
-                        "Quantity": 2.81
+                        "Quantity": 1.25
                     },
                     {
                         "ItemName": "Computer",
-                        "Quantity": 1.25
+                        "Quantity": 2.5
                     }
                 ],
                 "Output": [
@@ -5270,7 +5687,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 19600,
+                "SinkPoints": 32352,
                 "Radioactive": false
             }
         ],
@@ -5316,7 +5733,7 @@
                     },
                     {
                         "ItemName": "High-Speed Connector",
-                        "Quantity": 1.88
+                        "Quantity": 1.875
                     }
                 ],
             "Output": [
@@ -5466,7 +5883,7 @@
                     },
                     {
                         "ItemName": "Steel Pipe",
-                        "Quantity": 30
+                        "Quantity": 40
                     },
                     {
                         "ItemName": "Encased Industrial Beam",
@@ -5474,7 +5891,7 @@
                     },
                     {
                         "ItemName": "Screw",
-                        "Quantity": 200
+                        "Quantity": 240
                     }
                 ],
                 "Output": [
@@ -5524,7 +5941,7 @@
                     },
                     {
                         "ItemName": "Encased Industrial Beam",
-                        "Quantity": 9.38
+                        "Quantity": 9.375
                     },
                     {
                         "ItemName": "Steel Pipe",
@@ -5532,12 +5949,12 @@
                     },
                     {
                         "ItemName": "Concrete",
-                        "Quantity": 20.63
+                        "Quantity": 20.625
                     }
                 ],
             "Output": [
                     {
-                        "Quantity": 2.81,
+                        "Quantity": 2.8125,
                         "Byproduct": [
                         ]
                     }
@@ -5548,7 +5965,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 11520,
+                "SinkPoints": 10800,
                 "Radioactive": false
             }
         ],
@@ -5697,7 +6114,7 @@
                 "Input": [
                     {
                         "ItemName": "Computer",
-                        "Quantity": 3.75
+                        "Quantity": 7.5
                     },
                     {
                         "ItemName": "AI Limiter",
@@ -5705,7 +6122,7 @@
                     },
                     {
                         "ItemName": "High-Speed Connector",
-                        "Quantity": 5.63
+                        "Quantity": 5.625
                     },
                     {
                         "ItemName": "Plastic",
@@ -5714,7 +6131,7 @@
                 ],
                 "Output": [
                     {
-                        "Quantity": 1.88,
+                        "Quantity": 1.875,
                         "Byproduct": [
                         ]
                     }
@@ -5726,11 +6143,11 @@
                 "Input": [
                     {
                         "ItemName": "Radio Control Unit",
-                        "Quantity": 9
+                        "Quantity": 6
                     },
                     {
                         "ItemName": "Cooling System",
-                        "Quantity": 9
+                        "Quantity": 6
                     }
                 ],
                 "Output": [
@@ -5747,7 +6164,7 @@
                 "Input": [
                     {
                         "ItemName": "Computer",
-                        "Quantity": 3.6
+                        "Quantity": 7.2
                     },
                     {
                         "ItemName": "Electromagnetic Control Rod",
@@ -5759,7 +6176,7 @@
                     },
                     {
                         "ItemName": "Wire",
-                        "Quantity": 54
+                        "Quantity": 60
                     }
                 ],
                 "Output": [
@@ -5775,7 +6192,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 99576,
+                "SinkPoints": 97352,
                 "Radioactive": false
             }
         ],
@@ -5828,8 +6245,8 @@
                         "Quantity": 0.6
                     },
                     {
-                        "ItemName": "Beacon",
-                        "Quantity": 1.2
+                        "ItemName": "Rotor",
+                        "Quantity": 2
                     }
                 ],
                 "Output": [
@@ -5845,7 +6262,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 44092,
+                "SinkPoints": 43468,
                 "Radioactive": true
             }
         ],
@@ -5924,7 +6341,7 @@
                 "Input": [
                     {
                         "ItemName": "Automated Wiring",
-                        "Quantity": 7.5
+                        "Quantity": 5
                     },
                     {
                         "ItemName": "Circuit Board",
@@ -5936,7 +6353,7 @@
                     },
                     {
                         "ItemName": "Computer",
-                        "Quantity": 1
+                        "Quantity": 2
                     }
                 ],
                 "Output": [
@@ -6148,20 +6565,20 @@
                 "Input": [
                     {
                         "ItemName": "Heat Sink",
-                        "Quantity": 9.38
+                        "Quantity": 10
                     },
                     {
                         "ItemName": "Motor",
-                        "Quantity": 1.88
+                        "Quantity": 2.5
                     },
                     {
                         "ItemName": "Nitrogen Gas",
-                        "Quantity": 45
+                        "Quantity": 60
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 3.75,
+                        "Quantity": 5,
                         "Byproduct": [
                         ]
                     }
@@ -6304,7 +6721,7 @@
         "Recipes": [
             {
                 "Name": "Base",
-                "Machine": "Manufacturer",
+                "Machine": "Assembler",
                 "Input": [
                     {
                         "ItemName": "Versatile Framework",
@@ -6328,7 +6745,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 15650,
+                "SinkPoints": 11000,
                 "Radioactive": false
             }
         ],
@@ -6362,7 +6779,7 @@
                 ],
                 "Output": [
                     {
-                        "Quantity": 1.88,
+                        "Quantity": 1.875,
                         "Byproduct": [
                         ]
                     }
@@ -6374,24 +6791,24 @@
                 "Input": [
                     {
                         "ItemName": "Motor",
-                        "Quantity": 6.56
+                        "Quantity": 6.5625
                     },
                     {
                         "ItemName": "Radio Control Unit",
-                        "Quantity": 8.44
+                        "Quantity": 8.4375
                     },
                     {
                         "ItemName": "Electromagnetic Control Rod",
-                        "Quantity": 4.69
+                        "Quantity": 4.6875
                     },
                     {
                         "ItemName": "Rotor",
-                        "Quantity": 6.56
+                        "Quantity": 6.5625
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 2.81,
+                        "Quantity": 2.8125,
                         "Byproduct": [
                         ]
                     }
@@ -6407,7 +6824,7 @@
                     },
                     {
                         "ItemName": "Pressure Conversion Cube",
-                        "Quantity": 1.88
+                        "Quantity": 1.875
                     },
                     {
                         "ItemName": "Packaged Nitrogen Gas",
@@ -6431,7 +6848,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 242720,
+                "SinkPoints": 240496,
                 "Radioactive": false
             }
         ],
@@ -6468,7 +6885,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 257312,
+                "SinkPoints": 255088,
                 "Radioactive": false
             }
         ],
@@ -6666,7 +7083,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 543424,
+                "SinkPoints": 538976,
                 "Radioactive": false
             }
         ],
@@ -6711,7 +7128,7 @@
             {
                 "Form": "Solid",
                 "Stack": 50,
-                "SinkPoints": 732956,
+                "SinkPoints": 728508,
                 "Radioactive": false
             }
         ],
@@ -6720,7 +7137,7 @@
     },
     {
         "ItemName": "Reanimated SAM",
-        "Tier": 100,
+        "Tier": 1,
         "Recipes": [
             {
                 "Name": "Base",
@@ -6728,12 +7145,12 @@
                 "Input": [
                     {
                         "ItemName": "Strange Alien Matter",
-                        "Quantity": 0
+                        "Quantity": 120
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 30,
                         "Byproduct": [
                         ]
                     }
@@ -6743,8 +7160,8 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
+                "Stack": 100,
+                "SinkPoints": 160,
                 "Radioactive": false
             }
         ],
@@ -6753,7 +7170,7 @@
     },
     {
         "ItemName": "SAM Fluctuator",
-        "Tier": 100,
+        "Tier": 2,
         "Recipes": [
             {
                 "Name": "Base",
@@ -6761,20 +7178,20 @@
                 "Input": [
                     {
                         "ItemName": "Reanimated SAM",
-                        "Quantity": 0
+                        "Quantity": 60
                     },
                     {
                         "ItemName": "Wire",
-                        "Quantity": 0
+                        "Quantity": 50
                     },
                     {
                         "ItemName": "Steel Pipe",
-                        "Quantity": 0
+                        "Quantity": 30
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 10,
                         "Byproduct": [
                         ]
                     }
@@ -6784,8 +7201,8 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
+                "Stack": 100,
+                "SinkPoints": 1968,
                 "Radioactive": false
             }
         ],
@@ -6794,16 +7211,66 @@
     },
     {
         "ItemName": "Ficsite Ingot",
-        "Tier": 100,
+        "Tier": 3,
         "Recipes": [
             {
-                "Name": "Base",
-                "Machine": "",
+                "Name": "Ficsite Ingot (Iron)",
+                "Machine": "Converter",
                 "Input": [
+                    {
+                        "ItemName": "Reanimated SAM",
+                        "Quantity": 40
+                    },
+                    {
+                        "ItemName": "Iron Ingot",
+                        "Quantity": 240
+                    }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 10,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Ficsite Ingot (Aluminum)",
+                "Machine": "Converter",
+                "Input": [
+                    {
+                        "ItemName": "Reanimated SAM",
+                        "Quantity": 60
+                    },
+                    {
+                        "ItemName": "Aluminum Ingot",
+                        "Quantity": 120
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Ficsite Ingot (Caterium)",
+                "Machine": "Converter",
+                "Input": [
+                    {
+                        "ItemName": "Reanimated SAM",
+                        "Quantity": 45
+                    },
+                    {
+                        "ItemName": "Caterium Ingot",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 15,
                         "Byproduct": [
                         ]
                     }
@@ -6813,8 +7280,8 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
+                "Stack": 100,
+                "SinkPoints": 1936,
                 "Radioactive": false
             }
         ],
@@ -6823,7 +7290,7 @@
     },
     {
         "ItemName": "Ficsite Trigon",
-        "Tier": 100,
+        "Tier": 4,
         "Recipes": [
             {
                 "Name": "Base",
@@ -6831,12 +7298,12 @@
                 "Input": [
                     {
                         "ItemName": "Ficsite Ingot",
-                        "Quantity": 0
+                        "Quantity": 10
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 30,
                         "Byproduct": [
                         ]
                     }
@@ -6846,8 +7313,8 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
+                "Stack": 200,
+                "SinkPoints": 1291,
                 "Radioactive": false
             }
         ],
@@ -6856,7 +7323,7 @@
     },
     {
         "ItemName": "Diamond",
-        "Tier": 100,
+        "Tier": 1,
         "Recipes": [
             {
                 "Name": "Base",
@@ -6874,35 +7341,99 @@
                         ]
                     }
                 ]
-            }
-        ],
-        "Properties": [
+            },
             {
-                "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
-                "Radioactive": false
-            }
-        ],
-        "Tags": [
-        ]
-    },
-    {
-        "ItemName": "Time Crystal",
-        "Tier": 100,
-        "Recipes": [
-            {
-                "Name": "Base",
-                "Machine": "Converter",
+                "Name": "Turbo Diamonds",
+                "Machine": "Particle Accelerator",
                 "Input": [
                     {
-                        "ItemName": "Diamond",
-                        "Quantity": 0
+                        "ItemName": "Coal",
+                        "Quantity": 600
+                    },
+                    {
+                        "ItemName": "Packaged Turbofuel",
+                        "Quantity": 40
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Pink Diamonds",
+                "Machine": "Converter",
+                "Input": [
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Quartz Crystal",
+                        "Quantity": 45
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 15,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Petroleum Diamonds",
+                "Machine": "Particle Accelerator",
+                "Input": [
+                    {
+                        "ItemName": "Petroleum Coke",
+                        "Quantity": 720
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Oil-Based Diamonds",
+                "Machine": "Particle Accelerator",
+                "Input": [
+                    {
+                        "ItemName": "Crude Oil",
+                        "Quantity": 200
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 40,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Cloudy Diamonds",
+                "Machine": "Particle Accelerator",
+                "Input": [
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 240
+                    },
+                    {
+                        "ItemName": "Limestone",
+                        "Quantity": 480
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
                         "Byproduct": [
                         ]
                     }
@@ -6912,8 +7443,41 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
+                "Stack": 200,
+                "SinkPoints": 240,
+                "Radioactive": false
+            }
+        ],
+        "Tags": [
+        ]
+    },
+    {
+        "ItemName": "Time Crystal",
+        "Tier": 2,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Converter",
+                "Input": [
+                    {
+                        "ItemName": "Diamond",
+                        "Quantity": 12
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 6,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Properties": [
+            {
+                "Form": "Solid",
+                "Stack": 200,
+                "SinkPoints": 960,
                 "Radioactive": false
             }
         ],
@@ -6930,28 +7494,28 @@
                 "Input": [
                     {
                         "ItemName": "Alclad Aluminum Sheet",
-                        "Quantity": 0
+                        "Quantity": 45
                     },
                     {
                         "ItemName": "Crystal Oscillator",
-                        "Quantity": 0
+                        "Quantity": 5
                     },
                     {
                         "ItemName": "Dark Matter Crystal",
-                        "Quantity": 0
+                        "Quantity": 30
                     },
                     {
                         "ItemName": "Excited Photonic Matter",
-                        "Quantity": 0
+                        "Quantity": 125
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 5,
                         "Byproduct": [
                             {
                                 "ItemName": "Dark Matter Residue",
-                                "Quantity": 0
+                                "Quantity": 125
                             }
                         ]
                     }
@@ -6961,8 +7525,8 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
+                "Stack": 100,
+                "SinkPoints": 37292,
                 "Radioactive": false
             }
         ],
@@ -6970,7 +7534,7 @@
         ]
     },
     {
-        "ItemName": "Neural Quantum Processor",
+        "ItemName": "Neural-Quantum Processor",
         "Tier": 100,
         "Recipes": [
             {
@@ -6979,25 +7543,29 @@
                 "Input": [
                     {
                         "ItemName": "Ficsite Trigon",
-                        "Quantity": 0
+                        "Quantity": 45
                     },
                     {
                         "ItemName": "Time Crystal",
-                        "Quantity": 0
+                        "Quantity": 15
                     },
                     {
                         "ItemName": "Super Computer",
-                        "Quantity": 0
+                        "Quantity": 3
                     },
                     {
                         "ItemName": "Excited Photonic Matter",
-                        "Quantity": 0
+                        "Quantity": 75
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 3,
                         "Byproduct": [
+                            {
+                                "ItemName": "Dark Matter Residue",
+                                "Quantity": 75
+                            }
                         ]
                     }
                 ]
@@ -7006,8 +7574,8 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
+                "Stack": 100,
+                "SinkPoints": 248034,
                 "Radioactive": false
             }
         ],
@@ -7020,16 +7588,16 @@
         "Recipes": [
             {
                 "Name": "Base",
-                "Machine": "",
+                "Machine": "Converter",
                 "Input": [
                     {
                         "ItemName": "SAM Fluctuator",
-                        "Quantity": 0
+                        "Quantity": 50
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 100,
                         "Byproduct": [
                         ]
                     }
@@ -7045,6 +7613,7 @@
             }
         ],
         "Tags": [
+            "Byproduct"
         ]
     },
     {
@@ -7053,20 +7622,58 @@
         "Recipes": [
             {
                 "Name": "Base",
-                "Machine": "",
+                "Machine": "Particle Accelerator",
                 "Input": [
                     {
                         "ItemName": "Diamond",
-                        "Quantity": 0
+                        "Quantity": 30
                     },
                     {
                         "ItemName": "Dark Matter Residue",
-                        "Quantity": 0
+                        "Quantity": 150
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 30,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Dark Matter Trap",
+                "Machine": "Particle Accelerator",
+                "Input": [
+                    {
+                        "ItemName": "Time Crystal",
+                        "Quantity": 30
+                    },
+                    {
+                        "ItemName": "Dark Matter Residue",
+                        "Quantity": 150
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 60,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Dark Matter Crystallization",
+                "Machine": "Particle Accelerator",
+                "Input": [
+                    {
+                        "ItemName": "Dark Matter Residue",
+                        "Quantity": 200
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 20,
                         "Byproduct": [
                         ]
                     }
@@ -7076,8 +7683,8 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
+                "Stack": 200,
+                "SinkPoints": 1780,
                 "Radioactive": false
             }
         ],
@@ -7094,77 +7701,28 @@
                 "Input": [
                     {
                         "ItemName": "Excited Photonic Matter",
-                        "Quantity": 0
+                        "Quantity": 100
                     },
                     {
                         "ItemName": "Superposition Oscillator",
-                        "Quantity": 0
+                        "Quantity": 4
                     },
                     {
                         "ItemName": "Neural Quantum Processor",
-                        "Quantity": 0
+                        "Quantity": 4
                     },
                     {
                         "ItemName": "Magnetic Field Generator",
-                        "Quantity": 0
+                        "Quantity": 4
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 4,
                         "Byproduct": [
                             {
                                 "ItemName": "Dark Matter Residue",
-                                "Quantity": 0
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "Properties": [
-            {
-                "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
-                "Radioactive": false
-            }
-        ],
-        "Tags": [
-        ]
-    },
-    {
-        "ItemName": "Synthentic Power Shard",
-        "Tier": 100,
-        "Recipes": [
-            {
-                "Name": "Base",
-                "Machine": "Quantum Encoder",
-                "Input": [
-                    {
-                        "ItemName": "Quartz Crystal",
-                        "Quantity": 0
-                    },
-                    {
-                        "ItemName": "Time Crystal",
-                        "Quantity": 0
-                    },
-                    {
-                        "ItemName": "Dark Matter Crystal",
-                        "Quantity": 0
-                    },
-                    {
-                        "ItemName": "Excited Photonic Matter",
-                        "Quantity": 0
-                    }
-                ],
-                "Output": [
-                    {
-                        "Quantity": 0,
-                        "Byproduct": [
-                            {
-                                "ItemName": "Dark Matter Residue",
-                                "Quantity": 0
+                                "Quantity": 100
                             }
                         ]
                     }
@@ -7191,21 +7749,21 @@
                 "Machine": "Particle Accelerator",
                 "Input": [
                     {
-                        "ItemName": "Singularity Cell",
-                        "Quantity": 0
+                        "ItemName": "Plutonium Waste",
+                        "Quantity": 10
                     },
                     {
-                        "ItemName": "Plutonium Waste",
-                        "Quantity": 0
+                        "ItemName": "Singularity Cell",
+                        "Quantity": 10
                     },
                     {
                         "ItemName": "Dark Matter Residue",
-                        "Quantity": 0
+                        "Quantity": 200
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 10,
                         "Byproduct": [
                         ]
                     }
@@ -7215,9 +7773,9 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
+                "Stack": 100,
                 "SinkPoints": 0,
-                "Radioactive": false
+                "Radioactive": true
             }
         ],
         "Tags": [
@@ -7225,7 +7783,7 @@
     },
     {
         "ItemName": "Singularity Cell",
-        "Tier": 100,
+        "Tier": 8,
         "Recipes": [
             {
                 "Name": "Base",
@@ -7233,24 +7791,24 @@
                 "Input": [
                     {
                         "ItemName": "Iron Plate",
-                        "Quantity": 0
+                        "Quantity": 100
                     },
                     {
                         "ItemName": "Concrete",
-                        "Quantity": 0
+                        "Quantity": 200
                     },
                     {
                         "ItemName": "Dark Matter Crystal",
-                        "Quantity": 0
+                        "Quantity": 20
                     },
                     {
                         "ItemName": "Nuclear Pasta",
-                        "Quantity": 0
+                        "Quantity": 1
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 10,
                         "Byproduct": [
                         ]
                     }
@@ -7260,8 +7818,8 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
-                "SinkPoints": 0,
+                "Stack": 50,
+                "SinkPoints": 114675,
                 "Radioactive": false
             }
         ],
@@ -7278,28 +7836,28 @@
                 "Input": [
                     {
                         "ItemName": "Ficsite Trigon",
-                        "Quantity": 0
+                        "Quantity": 100
                     },
                     {
                         "ItemName": "Electromagnetic Control Rod",
-                        "Quantity": 0
+                        "Quantity": 5
                     },
                     {
                         "ItemName": "Ficsonium",
-                        "Quantity": 0
+                        "Quantity": 5
                     },
                     {
                         "ItemName": "Excited Photonic Matter",
-                        "Quantity": 0
+                        "Quantity": 50
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 2.5,
                         "Byproduct": [
                             {
                                 "ItemName": "Dark Matter Residue",
-                                "Quantity": 0
+                                "Quantity": 50
                             }
                         ]
                     }
@@ -7309,9 +7867,9 @@
         "Properties": [
             {
                 "Form": "Solid",
-                "Stack": 0,
+                "Stack": 50,
                 "SinkPoints": 0,
-                "Radioactive": false
+                "Radioactive": true
             }
         ],
         "Tags": [
@@ -7319,7 +7877,7 @@
     },
     {
         "ItemName": "Rocket Fuel",
-        "Tier": 100,
+        "Tier": 3,
         "Recipes": [
             {
                 "Name": "Base",
@@ -7327,20 +7885,53 @@
                 "Input": [
                     {
                         "ItemName": "Turbofuel",
-                        "Quantity": 0
+                        "Quantity": 60
                     },
                     {
                         "ItemName": "Nitric Acid",
-                        "Quantity": 0
+                        "Quantity": 10
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 100,
                         "Byproduct": [
                             {
                                 "ItemName": "Compacted Coal",
-                                "Quantity": 0
+                                "Quantity": 10
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Nitro Rocket Fuel",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Fuel",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Nitrogen Gas",
+                        "Quantity": 90
+                    },
+                    {
+                        "ItemName": "Sulfur",
+                        "Quantity": 120
+                    },
+                    {
+                        "ItemName": "Coal",
+                        "Quantity": 60
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 180,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Compacted Coal",
+                                "Quantity": 30
                             }
                         ]
                     }
@@ -7364,24 +7955,49 @@
         "Recipes": [
             {
                 "Name": "Base",
-                "Machine": "Blender",
+                "Machine": "Refinery",
                 "Input": [
                     {
                         "ItemName": "Rocket Fuel",
-                        "Quantity": 0
+                        "Quantity": 40
                     },
                     {
                         "ItemName": "Power Shard",
-                        "Quantity": 0
+                        "Quantity": 2.5
                     }
                 ],
                 "Output": [
                     {
-                        "Quantity": 0,
+                        "Quantity": 40,
                         "Byproduct": [
                             {
                                 "ItemName": "Compacted Coal",
-                                "Quantity": 0
+                                "Quantity": 5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Dark-Ion Fuel",
+                "Machine": "Converter",
+                "Input": [
+                    {
+                        "ItemName": "Packaged Rocket Fuel",
+                        "Quantity": 240
+                    },
+                    {
+                        "ItemName": "Dark Matter Crystal",
+                        "Quantity": 80
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 200,
+                        "Byproduct": [
+                            {
+                                "ItemName": "Compacted Coal",
+                                "Quantity": 40
                             }
                         ]
                     }
@@ -7393,6 +8009,92 @@
                 "Form": "Liquid",
                 "Stack": 0,
                 "SinkPoints": 0,
+                "Radioactive": false
+            }
+        ],
+        "Tags": [
+        ]
+    },
+    {
+        "ItemName": "Biochemical Sculptor",
+        "Tier": 9,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Blender",
+                "Input": [
+                    {
+                        "ItemName": "Thermal Propulsion Rocket",
+                        "Quantity": 0.5
+                    },
+                    {
+                        "ItemName": "Ficsite Trigon",
+                        "Quantity": 40
+                    },
+                    {
+                        "ItemName": "Water",
+                        "Quantity": 10
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 2,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Properties": [
+            {
+                "Form": "Solid",
+                "Stack": 50,
+                "SinkPoints": 301778,
+                "Radioactive": false
+            }
+        ],
+        "Tags": [
+        ]
+    },
+    {
+        "ItemName": "Ballistic Warp Drive",
+        "Tier": 9,
+        "Recipes": [
+            {
+                "Name": "Base",
+                "Machine": "Manufacturer",
+                "Input": [
+                    {
+                        "ItemName": "Thermal Propulsion Rocket",
+                        "Quantity": 1
+                    },
+                    {
+                        "ItemName": "Singularity Cell",
+                        "Quantity": 5
+                    },
+                    {
+                        "ItemName": "Superposition Oscillator",
+                        "Quantity": 2
+                    },
+                    {
+                        "ItemName": "Dark Matter Crystal",
+                        "Quantity": 40
+                    }
+                ],
+                "Output": [
+                    {
+                        "Quantity": 1,
+                        "Byproduct": [
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Properties": [
+            {
+                "Form": "Solid",
+                "Stack": 50,
+                "SinkPoints": 2895334,
                 "Radioactive": false
             }
         ],

@@ -27,6 +27,10 @@ function Build-TotalsFromChains {
             }
 
         } -End {
+            #Calculate belt or pipe totals
+            
+
+            #Write total to array
             $global:ActiveProject.Details.Totals += [PSCustomObject]@{
                 Name = $_.Name
                 Quantity = $ItemTotal
@@ -41,15 +45,10 @@ function Build-TotalsFromChains {
             $MachineMatch = $null
             $Machine = $_
 
-            $MachineMatch = Invoke-CloneObject ($global:ConfigMaster.Machines | Where-Object {$_.Name -eq $Machine.Name})
-
-            if ($MachineMatch.Count -gt 1) {
-                
-            }
+            $MachineMatch = Invoke-CloneObject ($global:ConfigMaster.Buildables.Machines | Where-Object {$_.Name -eq $Machine.Name})
 
             if ($MachineMatch.Power) {
                 $MinPower = $MachineMatch.Power * $Machine.Quantity
-
                 $Machine | Add-Member -MemberType NoteProperty -Name "Power" -Value $MinPower
                 
             } else {

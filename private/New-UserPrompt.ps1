@@ -25,7 +25,7 @@ function New-UserPrompt {
         }
 
         #Set options for prompt
-        $Options = "New project", "Reopen existing project", "Edit user preferences", "Exit"
+        $Options = "New project", "Open existing project", "Edit user preferences", "Exit"
         $PromptArray = New-PromptArray -Options $Options
 
         do {
@@ -137,26 +137,8 @@ function New-UserPrompt {
 
                     #Import files for existing projects or run user setting configuration
                     if ($global:RunSettings.Preferences.ProjectDirectory) {
-                        Write-Host ""
-                        $AllProjects = (Get-ChildItem -Path $global:RunSettings.Preferences.ProjectDirectory -Recurse | Where-Object {$_.Name -match ".xml"}) | Select-Object Name,FullName
-
-                        if ($AllProjects.Count -ge 1) {
-                            $AllProjects | Foreach-Object {
-                                $ProjectContents = $null
-                                $ProjectContents = Import-CLIXML -Path $_.FullName
-                                $FilePath = $_.FullName
-                                
-                                if ($ProjectContents.FilePath -ne $FilePath) {
-                                    Write-Host "$($FilePath)"
-                                    $ProjectContents.FilePath = $FilePath
-                                }
-
-                                $global:RunSettings.Projects += $ProjectContents
-                            }
-                            
-                            Write-Host -ForegroundColor Green "Found and imported [$($global:RunSettings.Projects.Count)] existing projects"
-                        }
-
+                        Get-ProjectFiles
+                        
                         if ($global:RunSettings.Mode -eq "UserConfig") {
                             Set-Preferences -Path $FilePath
                             $global:RunSettings.Mode = $null
@@ -183,6 +165,8 @@ function New-UserPrompt {
                 Byproducts = @()
             }
             Preferences = [PSCustomObject]@{
+                ConveyorBelt = $null
+                Pipe = $null
                 Miner = $null
                 Recipes = @()
             }
@@ -190,6 +174,7 @@ function New-UserPrompt {
             FilePath = $null
         }
 
+        $i = 0
         do {
             $Response = $null
             $Success = $null
@@ -202,9 +187,15 @@ function New-UserPrompt {
             }
 
             if (!$NewProject.Item) {
-                Write-Host ""
-                Write-Host -ForegroundColor Blue "What item do you want to produce in the factory (type 'help'): " -NoNewline
-                $Response = Read-Host
+                if ($i -eq 0) {
+                    $Response = "list"
+                    $i++
+
+                } else {
+                    Write-Host ""
+                    Write-Host -ForegroundColor Blue "What item do you want to produce in the factory (type 'help'): " -NoNewline
+                    $Response = Read-Host
+                }
                 
                 if ($Response -eq "help") {
                     Write-Host -ForegroundColor DarkGray "Type the item name, the ID #, or 'list' to see all items"
@@ -231,23 +222,20 @@ function New-UserPrompt {
                 if ($ItemToMake) {
                     $NewProject.Item = $ItemToMake.Name
                 }
-            }
 
-            #Prompt for quantity
-            if ($NewProject.Item -and !$NewProject.Quantity) {
+            } elseif (!$NewProject.Quantity) {
                 if ($NewProject.Item.Properties.Form -eq "Solid") {
                     Write-Host -ForegroundColor Blue "How many [$($NewProject.Item)] per minute?: " -NoNewline
 
                 } else {
-                    Write-Host -ForegroundColor Blue "How much [$($NewProject.Item)] per minute?: " -NoNewline
+                    Write-Host -ForegroundColor Blue "How many [$($NewProject.Item)] per minute?: " -NoNewline
                 }
+
                 $NewProject.Quantity = Read-Host
                 Write-Host ""
-            }
 
-            #Prompt for miner
-            if (($NewProject.Item) -and ($NewProject.Quantity) -and (!$NewProject.Preferences.Miner)) {
-                $Options = Invoke-CloneObject -InputObject ($global:ConfigMaster.Machines | Where-Object {$_.Name -match "Miner"}).Name
+            } elseif (!$NewProject.Preferences.ConveyorBelt) {
+                $Options = Invoke-CloneObject -InputObject ($global:ConfigMaster.Buildables.Belts).Name
                 $PromptArray = New-PromptArray -Options $Options
                 
                 Write-Host ""
@@ -257,23 +245,62 @@ function New-UserPrompt {
                 }
                 Write-Host ""
 
-                Write-Host -ForegroundColor Blue "Select which mining machine to use for factory calculations: " -NoNewline
+                Write-Host -ForegroundColor Blue "Select which conveyor belt speed to use for factory calculations: " -NoNewline
                 $Response = Read-Host
 
-                if ($PromptArray.ID -contains $Response) {
-                    $NewProject.Preferences.Miner = ($PromptArray | Where-Object {$_.ID -eq $Response}).Message
-
-                } elseif ($PromptArray.Message -contains $Response) {
-                    $NewProject.Preferences.Miner = ($PromptArray | Where-Object {$_.Message -eq $Response}).Message
+                if (($PromptArray.ID -contains $Response) -or ($PromptArray.Message -contains $Response)) {
+                    $NewProject.Preferences.ConveyorBelt = ($PromptArray | Where-Object {($_.ID -eq $Response) -or ($_.Message -eq $Response)}).Message
 
                 } else {
                     Write-Host -ForegroundColor Red "Invalid selection, try again"
                 }
 
+            } elseif (!$NewProject.Preferences.Pipe) {
+                $Options = Invoke-CloneObject -InputObject ($global:ConfigMaster.Buildables.Pipes).Name
+                $PromptArray = New-PromptArray -Options $Options
+                
                 Write-Host ""
-            }
+                $PromptArray | Foreach-Object {
+                    Write-Host -ForegroundColor Yellow "[$($_.ID)]" -NoNewline
+                    Write-Host -ForegroundColor Blue " $($_.Message)"
+                }
+                Write-Host ""
 
-            if ($NewProject.Name -and $NewProject.Item -and $NewProject.Quantity) {
+                Write-Host -ForegroundColor Blue "Select which pipe to use for factory calculations: " -NoNewline
+                $Response = Read-Host
+
+                if (($PromptArray.ID -contains $Response) -or ($PromptArray.Message -contains $Response)) {
+                    $NewProject.Preferences.Pipe = ($PromptArray | Where-Object {($_.ID -eq $Response) -or ($_.Message -eq $Response)}).Message
+
+                } else {
+                    Write-Host -ForegroundColor Red "Invalid selection, try again"
+                }
+
+            } elseif (!$NewProject.Preferences.Miner) {
+                $Options = Invoke-CloneObject -InputObject ($global:ConfigMaster.Buildables.Machines | Where-Object {$_.Name -match "Miner"}).Name
+                $PromptArray = New-PromptArray -Options $Options
+                
+                Write-Host ""
+                $PromptArray | Foreach-Object {
+                    Write-Host -ForegroundColor Yellow "[$($_.ID)]" -NoNewline
+                    Write-Host -ForegroundColor Blue " $($_.Message)"
+                }
+                Write-Host ""
+
+                Write-Host -ForegroundColor Blue "Select which miner to use for factory calculations: " -NoNewline
+                $Response = Read-Host
+
+                if (($PromptArray.ID -contains $Response) -or ($PromptArray.Message -contains $Response)) {
+                    $NewProject.Preferences.Miner = ($PromptArray | Where-Object {($_.ID -eq $Response) -or ($_.Message -eq $Response)}).Message
+
+                } else {
+                    Write-Host -ForegroundColor Red "Invalid selection, try again"
+                }
+
+            } elseif (!$NewProject.FilePath) {
+                $NewProject.FilePath = "$($global:RunSettings.Preferences.ProjectDirectory)\$($ProjectName).xml"
+
+            } else {
                 Write-Host -ForegroundColor DarkGray "-------------------------"
                 Write-Host -ForegroundColor DarkGreen "New Project Configuration"
                 Write-Host -ForegroundColor DarkGray "-------------------------"
@@ -286,8 +313,12 @@ function New-UserPrompt {
                 Write-Host -ForegroundColor DarkGray "Rate"
                 Write-Host -ForegroundColor Cyan "   $($NewProject.Quantity) per min"
                 Write-Host ""
-                Write-Host -ForegroundColor DarkGray "Miner"
-                Write-Host -ForegroundColor Cyan "   $($NewProject.Preferences.Miner)"
+                Write-Host -ForegroundColor DarkGray "Belt:" -NoNewLine
+                Write-Host -ForegroundColor Cyan "  $($NewProject.Preferences.ConveyorBelt)"
+                Write-Host -ForegroundColor DarkGray "Pipe:" -NoNewLine
+                Write-Host -ForegroundColor Cyan "  $($NewProject.Preferences.Pipe)"
+                Write-Host -ForegroundColor DarkGray "Miner:" -NoNewLine
+                Write-Host -ForegroundColor Cyan "  $($NewProject.Preferences.Miner)"
                 Write-Host -ForegroundColor DarkGray "-------------------------"
                 Write-Host ""
                 Write-Host -ForegroundColor Blue "Proceed with project creation? (Y or N): " -NoNewLine
@@ -308,15 +339,44 @@ function New-UserPrompt {
                 }
             }
 
-        } until ($NewProject.Name -and $NewProject.Item -and $NewProject.Quantity -and $Success -eq $true)
+        } until ($Success -eq $true)
 
         Write-Output $NewProject
 
     } elseif ($ExistingProjectStart) {
-        $Options = $global:RunSettings.Projects.Name
+        $Options = "List all projects","Select project","Delete project"
         $PromptArray = New-PromptArray -Options $Options
 
-        #Prompt user to select the project to work on
+        #Prompt user with options
+        do {
+            $UserResponse = $null
+
+            Write-Host ""
+            $PromptArray | Foreach-Object {
+                Write-Host -ForegroundColor Yellow "[$($_.ID)]" -NoNewline
+                Write-Host -ForegroundColor Blue " $($_.Message)"
+            }
+
+            Write-Host ""
+            Write-Host -ForegroundColor Blue "Select what you would like to do ($($PromptArray[0].ID)-$($PromptArray[-1].ID)): " -NoNewLine
+            $UserResponse = Read-Host
+
+            if (($PromptArray.ID -contains $UserResponse) -or ($PromptArray.Message -contains $UserResponse)) {
+                $Selection = $PromptArray | Where-Object {($_.ID -eq $UserResponse) -or ($_.Message -eq $UserResponse)}
+
+                if ($Selection.ID -eq 1) {
+                    $Options = $global:RunSettings.Projects.Name
+
+
+                } else {
+
+                }
+
+            } else {
+                Write-Host -ForegroundColor Red "Invalid selection, try again"
+            }
+
+        } until ($UserSelection)
         
 
 
@@ -501,6 +561,13 @@ function New-UserPrompt {
 
         
     } elseif ($End) {
-        
+        if ($global:RunSettings.Mode -eq "New") {
+            Export-Project -End
+
+            Write-Host -ForegroundColor Green "Project build completed!"
+
+        } elseif ($global:RunSettings.Mode -eq "Existing") {
+
+        }
     }
 }
