@@ -39,13 +39,13 @@
         },
         {
             "Name": "Quantum Encoder",
-            "PowerMin": 500,
-            "PowerMax": 1500
+            "PowerMin": 0,
+            "PowerMax": 2000
         },
         {
             "Name": "Converter",
-            "PowerMin": 500,
-            "PowerMax": 1500
+            "PowerMin": 100,
+            "PowerMax": 400
         },
         {
             "Name": "Water Extractor",
